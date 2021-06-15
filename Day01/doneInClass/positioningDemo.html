@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position Demo</title>
+	<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}		
+	body{
+		font-family: Verdana;
+	}
+
+	h1{
+		border-bottom: 1px solid black;
+	}
+
+	div{
+		padding: 1em;
+	}
+	.parent{
+		background-color: lightblue;
+		position: relative;
+		height: 200vh; /*make it bigger so you can see the sticky on child 4*/
+	}
+
+	.child-one{
+  		background-color:green;
+  		position: relative;
+  		top: 20px;
+  		left: 20px;
+	}
+
+/* 	.child-one h2{
+		position: absolute;
+		border: 1px solid black;
+		child-one does not recognize ht inside because with absolute positioning it is out of the flow 
+	}
+*/
+
+
+	.child-two{
+  		background-color:coral;
+  		position: absolute;
+  		top:0;
+  		left: 0;
+	}
+
+	.child-three{
+		background-color: magenta;
+		position: fixed;
+		top: 0;
+		right:0;
+	}
+
+	.child-four{
+		background-color: rebeccapurple;
+		position: sticky;
+		top: 0;
+
+	}
+
+
+
+	</style>
+
+</head>
+<body>
+<div class="parent">
+	<h1>Parent</h1>
+	<div  class="child-one">
+		<h2>One</h2>
+	</div>	
+	<div  class="child-two">
+		<h2>Two</h2>
+	</div>	
+	<div  class="child-three">
+		<h2>Three</h2>
+	</div>	
+	<div  class="child-four">
+		<h2>Four</h2>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla est ullamcorper eget nulla facilisi. Tellus elementum sagittis vitae et leo duis ut diam quam. Duis at tellus at urna condimentum mattis pellentesque. Quis eleifend quam adipiscing vitae. Dapibus ultrices in iaculis nunc sed augue lacus. Ridiculus mus mauris vitae ultricies leo. Nunc scelerisque viverra mauris in. Massa tincidunt dui ut ornare lectus sit amet est. Quisque non tellus orci ac auctor augue mauris.</p> 
+  
+ <p> Nibh ipsum consequat nisl vel pretium lectus. Augue neque gravida in fermentum et sollicitudin ac orci. Urna duis convallis convallis tellus id interdum velit laoreet. Pharetra diam sit amet nisl suscipit adipiscing. Tristique et egestas quis ipsum suspendisse ultrices. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Volutpat lacus laoreet non curabitur gravida arcu ac. Adipiscing elit duis tristique sollicitudin. Dictum fusce ut placerat orci. </p>
+
+<p>Cras ornare arcu dui vivamus. Varius vel pharetra vel turpis. Tincidunt praesent semper feugiat nibh sed pulvinar. Feugiat vivamus at augue eget arcu dictum varius duis. Turpis massa tincidunt dui ut ornare. Massa massa ultricies mi quis hendrerit. Nunc non blandit massa enim nec dui nunc mattis. At quis risus sed vulputate odio ut enim. At imperdiet dui accumsan sit amet nulla facilisi morbi. Netus et malesuada fames ac turpis. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Egestas integer eget aliquet nibh praesent. Faucibus purus in massa tempor nec feugiat nisl pretium fusce. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Morbi tristique senectus et netus et malesuada fames ac turpis.</p>
+
+<p>Ut tristique et egestas quis ipsum. Risus viverra adipiscing at in tellus. Varius morbi enim nunc faucibus a pellentesque sit amet. Et molestie ac feugiat sed lectus vestibulum. Faucibus nisl tincidunt eget nullam non nisi est sit. Urna et pharetra pharetra massa massa ultricies mi. Nisi scelerisque eu ultrices vitae auctor eu augue. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Ut tortor pretium viverra suspendisse. Lacinia at quis risus sed vulputate. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Tincidunt tortor aliquam nulla facilisi cras fermentum. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Quisque non tellus orci ac auctor.</p>  	
+</div>
+
+</body>
+</html>

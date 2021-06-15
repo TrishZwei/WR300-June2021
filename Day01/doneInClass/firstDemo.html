@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- super important for the browser to interpret this for responsive -->
+	
+	<title>First Demo</title>
+	<style type="text/css">
+		html{
+			box-sizing: border-box;
+			font-family: verdana;
+		}
+
+		*, *:before, *:after{
+			box-sizing: inherit;
+
+		}
+
+		.cf:before,
+		.cf:after{
+			content: " ";
+			display: table;
+		}
+
+
+		img{
+			width: 100%;
+		}
+
+		#nav-list li{
+			float: left;
+    		list-style: none;
+    		margin-left: .5em;
+		}
+
+
+	</style>
+</head>
+<body class="cf">
+	<header>
+		<h1>We Love Coffee</h1>
+	
+		<nav role="navigation" id="main-nav">
+			<!-- the ARIA role="navigation" is redundant but doesn't hurt -->
+			<ul class="cf" id="nav-list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Deals</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!-- main content -->
+		<div id="image-slider">
+			<!-- hero image to go here, carousel to follow -->
+			<img src="https://placeimg.com/640/480/coffee">
+		</div>
+		<article>
+			<!-- articles are complete pieces of content that do not have to reference anything else -->
+			<h2>Coffee is great! We Love It!</h2>
+			<section class="cf">
+				<figure>
+					<img src="https://placeimg.com/640/480/coffee">
+					<figcaption>A delicious cuppa</figcaption>
+				</figure>	
+				<h3>And here's 7 reasons why!</h3>
+				<p>At this website we love coffee! And we assume that you've come here because you love coffee too. Coffee isn't just warm and energizing, it may also be extremely good for you.</p>	
+				<p>In recent years, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>			
+			</section>
+		</article>
+	</main>	
+<!-- some positioning stuff -->
+<style type="text/css">
+	/*not a best practice. Just here to keep it close*/
+	div{
+		padding: 1em;
+	}
+
+	.parent{
+		background-color: lightblue;
+		position: relative;
+	}
+	
+</style>
+
+	<div class="parent">
+		<h2>Parent</h2>
+		<div class="child-one">
+			<h3>One</h3>
+		</div>
+		<div class="child-two">
+			<h3>Two</h3>
+		</div>
+		<div class="child-three">
+			<h3>Three</h3>
+		</div>
+		<div class="child-four">
+			<h3>Four</h3>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
