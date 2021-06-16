@@ -1,0 +1,55 @@
+html{
+	background-color: #dde2c6;
+}
+body{
+	font-size: 100%;
+	width: 80%;
+	margin: 0 auto;
+	color: #333;
+	background-color: cornsilk;
+	font-family: sans-serif;
+	padding: 3%;
+	line-height: 1.5;
+}
+header, footer{
+	color: cornsilk;
+	background-color: #d5573b;
+	text-align: center;
+	padding: 1%;
+}
+blockquote{
+	font-style: italic;
+	margin-bottom:.5%;
+}
+main div{
+	display: none;
+}
+/*  ++++++ MEDIA QUERIES ++++++++ */
+@media screen and (min-width:530px){
+	html{
+		background-color: #bbc5aa;
+	}
+	main div{
+		display: block;
+		background:url(../images/winterM.jpg) center bottom no-repeat #ccc8cf;
+		min-height: 630px;
+	}
+	div a{
+		display: block;
+		padding-top: 595px;
+		text-align: center;
+		font-size: .8em;
+		color: #333;
+		font-style: italic;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* end */
