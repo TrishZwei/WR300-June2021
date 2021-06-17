@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* fonts*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+/* end fonts*/
+
+html{
+	background-color:#563628; /*brown*/
+}
+body {
+	color: #333;
+	font-size:100%;
+	font-family:'Gentium Book Basic', serif;
+	color:#666;
+	line-height: 1.5;
+	width:80%;
+	margin:0 auto;
+	padding-left:1.5em;
+	background-color:white;
+	display:flex;
+	justify-content:space-between;
+}
+h1 {
+	font-family: 'Open Sans', Trebuchet MS, sans-serif;
+	font-size: 3.5em;
+	line-height: 1.2em;
+	margin-bottom: .2em;
+	margin-top: .4em;
+	color:#2E2E30;
+	text-transform:uppercase;
+	letter-spacing:-0.05em;
+	font-weight:400;
+}
+h1 b{
+	color:#CC4839;
+	font-weight:700;
+}
+h2 {
+	border-bottom: 2px solid #dbdbdb;
+	font-family: 'Open Sans', Trebuchet MS, serif;
+	font-size: 1.5em;
+	line-height: 1em;
+	margin-bottom: .7em;
+	margin-top: 1em;
+	color:#CC4839;
+}
+b{
+	font-weight:700;
+	color:#CC4839;
+	font-size:1.2em;
+}
+h1+p{
+	font-size:1.5em;
+	line-height:1.2em;
+	font-weight:400;
+}
+p,
+ul{
+	margin-bottom: 1em
+}
+a {
+	color: #2E2E30;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul{
+	list-style:none;
+}
+main {
+	padding-right: 2em;
+	width:60%;
+	overflow:hidden;
+}
+aside {
+	width: 25%;
+	padding-top:6em;
+	padding-right:2em;
+}
+aside img{
+	padding:0.5em 0;
+}
+blockquote {
+	font-style: italic;
+	margin-bottom: 1.5em;
+	padding-left: 1em;
+}
+blockquote:before {
+	content: "\201C";
+	float: left;
+	font-size: 2.5em;
+	font-style: normal;
+	left: -.4em;
+	top: -0.35em;
+	position: relative;
+	color:#CC4839;
+}
+aside a:before{
+	content:"• ";
+	color:#CC4839;
+}
+cite {
+	display: block;
+	font-style: italic;
+	text-align: right;
+	color:#CC4839;
+	font-size:0.75em;
+}

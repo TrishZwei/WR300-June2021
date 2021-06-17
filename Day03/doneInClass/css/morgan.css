@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* COLORS
+gray: #2E2E30
+red #CC4839
+*/
+
+
+/* fonts*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+/* end fonts*/
+
+html{
+	
+	background-color:#563628; /*brown*/
+}
+
+.no-js{
+	background-color:#3D769C; /*light blue*/
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font-size:100%;
+	width:1150px;  /*this is the max size for the imagw not to upsample*/
+	margin:0 auto;
+}
+
+
+ul{
+	list-style:none;
+}
+
+/* Typography */
+body{
+	font-family:'Gentium Book Basic', serif;
+	color:#666;
+	padding-left:1.5em; /*24px / 16px*/
+}
+
+h1 {
+    font-family: 'Open Sans', Trebuchet MS, sans-serif;
+    font-size: 3.5em; /* 40px / 16px */
+    line-height: 1.2em; /* 48px / 40px */
+    margin-bottom: .2em;
+    margin-top: .4em;
+	color:#2E2E30;
+	text-transform:uppercase;
+	letter-spacing:-0.05em;
+	font-weight:400;
+}
+
+h1 b{
+	color:#CC4839;
+	font-weight:700;
+}
+
+h2 {
+    border-bottom: 2px solid #dbdbdb;
+    font-family: 'Open Sans', Trebuchet MS, serif;
+    font-size: 1.5em; /* 24px/16px */
+    line-height: 1em;
+    margin-bottom: .666666667em; /* 16px / 24px */
+    margin-top: 1em;
+	color:#CC4839;
+}
+b{
+	font-weight:700;
+	color:#CC4839;
+	font-size:1.2em;
+}
+.summary{
+	font-size:1.5em;
+	line-height:1.2em;
+	font-weight:400;		
+}
+
+blockquote {
+    font-style: italic;
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+}
+
+blockquote:before {
+    content: "\201C";
+    float: left;
+    font-size: 2.5em;
+    font-style: normal;
+    left: -.4em;
+	top: -0.35em;
+    position: relative;
+	color:#CC4839;
+}
+
+a {
+    color: #2E2E30;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+aside a:before{
+	content:"• ";
+	color:#CC4839;
+}
+
+cite {
+    display: block;
+    font-style: italic;
+    text-align: right;
+	color:#CC4839;
+	font-size:0.75em;
+}
+
+
+
+/*
+Base styles
+ * --------------------------------------------------*/
+ /* if js is on, modernizer will replace this class with the approproiate classes. If there is no js, this rule will apply*/
+.no-js{
+	background-color:#39C;
+}
+
+p,
+ul{
+    margin-bottom: 1em
+}
+
+#container {
+    margin: auto 0;
+    overflow: hidden;
+    width: 95%;
+    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
+}
+main {
+	padding-right: 2.5316456%; /* 24px / 948px */
+	width:70%;
+	float:left;
+}
+
+aside {
+	float:right;
+	width: 25%;
+	padding-top:6em;
+}
+
+aside img{
+	padding:0.5em 0;
+}
