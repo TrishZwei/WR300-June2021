@@ -6,6 +6,9 @@ gray: #2E2E30
 red #CC4839
 */
 
+*, *:before, *:after{
+	box-sizing: border-box;
+}
 
 /* fonts*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
@@ -23,10 +26,12 @@ html{
 
 body {
     background: #fff;
-    color: #333;
     font-size:100%;
-	width:1150px;  /*this is the max size for the imagw not to upsample*/
+	width:90%;
 	margin:0 auto;
+	font-family:'Gentium Book Basic', serif;
+	color:#666;
+	padding-left:1.5em; /*24px / 16px*/
 }
 
 
@@ -34,16 +39,10 @@ ul{
 	list-style:none;
 }
 
-/* Typography */
-body{
-	font-family:'Gentium Book Basic', serif;
-	color:#666;
-	padding-left:1.5em; /*24px / 16px*/
-}
 
 h1 {
     font-family: 'Open Sans', Trebuchet MS, sans-serif;
-    font-size: 3.5em; /* 40px / 16px */
+    font-size: 3em; /* 40px / 16px */
     line-height: 1.2em; /* 48px / 40px */
     margin-bottom: .2em;
     margin-top: .4em;
@@ -72,6 +71,12 @@ b{
 	color:#CC4839;
 	font-size:1.2em;
 }
+
+img.morgan{
+	width: 100%;
+	max-width: 1150px;
+}
+
 .summary{
 	font-size:1.5em;
 	line-height:1.2em;
@@ -85,7 +90,8 @@ blockquote {
 }
 
 blockquote:before {
-    content: "\201C";
+/*    content: "\201C";*/
+	content: open-quote;
     float: left;
     font-size: 2.5em;
     font-style: normal;
@@ -115,39 +121,56 @@ cite {
 	font-size:0.75em;
 }
 
-
-
-/*
-Base styles
- * --------------------------------------------------*/
- /* if js is on, modernizer will replace this class with the approproiate classes. If there is no js, this rule will apply*/
-.no-js{
-	background-color:#39C;
-}
-
 p,
 ul{
     margin-bottom: 1em
 }
 
 #container {
-    margin: auto 0;
-    overflow: hidden;
-    width: 95%;
-    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
+    margin: 0 auto;
+    width: 90%;
+   	padding: .625em 1.0548523% 1.5em;
+   	overflow: hidden;
 }
+
 main {
 	padding-right: 2.5316456%; /* 24px / 948px */
-	width:70%;
-	float:left;
+	width:100%;
 }
 
 aside {
-	float:right;
-	width: 25%;
-	padding-top:6em;
+	width: 100%;
 }
 
-aside img{
-	padding:0.5em 0;
+
+/*media queries*/
+@media screen and (min-width: 800px){
+	#container{
+		display: block;
+	}
+
+	.flexbox #container{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+	}
+	#container main{
+		width: 70%;
+		display: inline-block;
+	}
+
+	#container aside{
+		width: 25%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.flexbox #container main, .flexbox #container aside{
+		flex: 0 1 auto;
+	}
+
+	
+
+
 }

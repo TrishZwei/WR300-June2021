@@ -9,6 +9,11 @@
 html{
 	background-color:#563628; /*brown*/
 }
+
+.no-js{
+	background-color:#3D769C; /*light blue*/
+}
+
 body {
 	color: #333;
 	font-size:100%;
@@ -89,7 +94,7 @@ blockquote {
 	padding-left: 1em;
 }
 blockquote:before {
-	content: "\201C";
+	content: open-quote;
 	float: left;
 	font-size: 2.5em;
 	font-style: normal;
