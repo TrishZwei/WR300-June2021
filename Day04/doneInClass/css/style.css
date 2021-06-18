@@ -54,12 +54,148 @@ img{
 /*
 ==============================================
 CSS3 ANIMATIONS
+==============================================
+*/
 
+/*
+==============================================
+pulse
+==============================================
+*/
+
+@keyframes pulse{
+	0%{
+		transform:scale(.9);
+		opacity:.7;
+	}
+	50%{
+		transform:scale(1);
+		opacity:1;
+	}
+	100%{
+		transform:scale(.9);
+		opacity:.7;
+	}
+}
+
+	.pulse{
+		animation-name:pulse;
+		animation-duration:1s;
+		animation-iteration-count:infinite;
+	}
+
+/*
+==============================================
+floating
+==============================================
+*/
+@keyframes floating{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform:translateY(8%);
+	}
+	100%{
+		transform:translateY(0);
+	}
+}
+
+.floating{
+	animation-name: floating;
+	animation-duration: 3.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+/*
+==============================================
+tossing
+==============================================
+*/
+@keyframes tossing{
+	0%{
+		transform: rotate(-4deg);
+	}
+	50%{
+		transform: rotate(4deg);
+	}
+	100%{
+		transform: rotate(-4deg);
+	}
+}
+
+.tossing{
+	animation-name: tossing;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+}
+
+/*
+==============================================
+slideUp
 ==============================================
 */
 
 
+.slideUp{
+	animation-name: slideUp;	
+	animation-duration: 1s;	
+	animation-timing-function: ease;	
+	visibility: visible !important;			
+}
 
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}	
+}
+
+/*
+==============================================
+fadeIn
+==============================================
+*/
+
+.fadeIn{
+	animation-name: fadeIn;	
+	animation-duration: 1.5s;	
+	animation-timing-function: ease-in-out;	
+	visibility: visible !important;	
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	60% {
+		transform: scale(1.1);	
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
 
 
 

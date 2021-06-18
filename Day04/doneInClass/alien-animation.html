@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Animations and Transitions Example</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1> Animation Playground</h1>
+	</header>
+
+	<main>
+		<section>
+			<img src="images/alien.png" class="floating" id="alien">
+		</section>
+
+		<section>
+			<h2>Select Your Animation</h2>
+			<div>
+				<a href="#" id="slideUpBtn" class="button">Slide Up</a>
+				<a href="#" id="fadeInBtn" class="button">Fade In</a>
+				<a href="#" id="pulseBtn" class="button">Pulse</a>
+				<a href="#" id="floatBtn" class="button">Floating</a>
+				<a href="#" id="tossBtn" class="button">Tossing</a>
+			</div>
+		</section>
+	</main>
+	<!-- js at the bottom -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		//jQuery custom script must go below jQ
+		let img = $('img'); //stores the image element
+
+		//pulse button
+		$('#pulseBtn').click( function(){
+			// alert('click');
+			// console.log(img);
+			//when I click, remove the class and add the new class
+			img.removeClass(); //gets rid of all the classes on the element
+			img.addClass('pulse');
+		})
+
+		//tossing button
+		$('#tossBtn').click( function(){
+			// alert('click');
+			// console.log(img);
+			//when I click, remove the class and add the new class
+			img.removeClass().addClass('tossing');
+		})
+
+		//floating button
+		$('#floatBtn').click( function(){
+			// alert('click');
+			// console.log(img);
+			//when I click, remove the class and add the new class
+			img.removeClass().addClass('floating');
+		})
+
+		//slideUp button
+		$('#slideUpBtn').click( function(){
+			// alert('click');
+			// console.log(img);
+			//when I click, remove the class and add the new class
+			img.removeClass().addClass('slideUp');
+			setTimeout( function(){
+				img.removeClass();
+			}, 1000)
+		})
+
+		//fadeIn button
+		$('#fadeInBtn').click( function(){
+			// alert('click');
+			// console.log(img);
+			//when I click, remove the class and add the new class
+			img.removeClass().addClass('fadeIn');
+			setTimeout( function(){
+				img.removeClass();
+			}, 1500)
+		})		
+
+
+	</script>
+
+</body>
+</html>

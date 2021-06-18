@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animation Loop</title>
+	<style type="text/css">
+		.parent{
+			background-color: hsla(200, 100%, 20%, 1.0); /*hue, saturation, light, alpha */
+			width: 400px;
+			height: 400px;
+		}
+
+		.child{
+			background-color: red;
+			height: 50%;
+			width: 50%;
+			transition: transform 1s cubic-bezier(0.84,-0.16, 0.32, 1.28); /*type, duration, easing, delay*/
+			}
+
+		.parent:hover .child{
+			animation: left-to-right 4s ease-in forwards infinite;
+			/*name, duration, easing, delay, apply new values, iterations, direction  */
+		}
+
+		@keyframes left-to-right{
+			/* automatically starts with where our child properties are but to make things a little more performant we need to specifiy*/
+			0%{
+
+				background-color: red;
+				transform: translateX(0%);
+			}
+
+			25%{
+				background-color: cadetblue;
+				transform: translateY(100%);
+			}
+
+			50%{
+				background-color: rebeccapurple;
+				transform: translateX(100%) translateY(100%);
+			}
+
+			75%{
+				background-color: green;
+				transform: translateX(100%)	
+			}
+
+			100%{
+				background-color: red;
+				transform: translateX(0%);
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+</body>
+</html>

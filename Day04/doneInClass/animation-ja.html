@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animation Loop</title>
+	<style type="text/css">
+		.parent{
+			background-color: hsla(200, 100%, 20%, 1.0); /*hue, saturation, light, alpha */
+			width: 400px;
+			height: 400px;
+		}
+
+		.child{
+			background-color: red;
+			height: 50%;
+			width: 50%;
+			transition: transform 1s cubic-bezier(0.84,-0.16, 0.32, 1.28); /*type, duration, easing, delay*/
+			}
+
+		.parent:hover .child{
+			animation: pulse 2.5s cubic-bezier(.33,.79,.95,.37) forwards infinite;
+			/*name, duration, easing, delay, apply new values, iterations, direction  */
+		}
+
+		@keyframes pulse{
+			0%{
+				transform:scale(.9);
+				opacity:.7;
+			}
+			50%{
+				transform:scale(1);
+				opacity:1;
+			}
+			100%{
+				transform:scale(.9);
+				opacity:.7;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+</body>
+</html>
