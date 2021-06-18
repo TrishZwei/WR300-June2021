@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Animations and Transitions Example</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/style.css">
+ <script src="scripts/jquery-3.4.1.min.js"></script>
+ <script>
+ 	//when I click the button, I want to remove whatever class is there, and add the right class to it
+ 	$(document).ready(function(){
+ 		var $alien=$('img');
+ 		
+ 		function myAnim(myclass){
+ 			$alien.removeClass();
+ 			//add some time between the two actions. 2 parameters: what you want to do, and the delay
+ 			mytimer=setTimeout(function(){
+ 				$alien.addClass(myclass);},
+ 			50);
+ 			}			
+
+		//whenever a button is clicked
+ 		$('a.button').click(function(){
+ 			//i need to find out its id
+ 			//this= whatever element is receiving the click event
+ 		switch(this.id){
+ 				case 'slideUpBtn':
+					myAnim('slideUp');
+					break;
+				case 'fadeInBtn':
+					myAnim('fadeIn');
+					break;
+				case 'pulseBtn':
+					myAnim('pulse');
+					break;
+				case 'floatBtn':
+					myAnim('float');
+					break;
+				case 'tossBtn':
+					myAnim('tossIn');
+					break;
+ 			 }//closes switch
+ 		})//ends click
+ 	});//closes doc ready
+ 	
+ </script>
+
+
+</head>
+<body>
+	<header>
+		<h1> Animation Playground</h1>
+	</header>
+
+	<main>
+		<section>
+			<img src="images/alien.png" class="float" id="alien">
+		</section>
+
+		<section>
+			<h2>Select Your Animation</h2>
+			<div class="fadeIn">
+				<a href="#" id="slideUpBtn" class="button">Slide Up</a>
+				<a href="#" id="fadeInBtn" class="button">Fade In</a>
+				<a href="#" id="pulseBtn" class="button">Pulse</a>
+				<a href="#" id="floatBtn" class="button">Floating</a>
+				<a href="#" id="tossBtn" class="button">Tossing</a>
+			</div>
+		</section>
+	</main>
+
+</body>
+</html>

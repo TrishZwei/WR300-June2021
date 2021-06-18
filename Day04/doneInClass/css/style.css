@@ -1,0 +1,98 @@
+/*apply natural box model*/
+* {box-sizing: border-box; }
+
+body{
+	background-color: #F4F4F4;
+	font-family: 'Trebuchet', sans-serif;
+	font-size: 18px;
+	line-height: 2;
+	color: #555555;
+	font-weight: bold;
+	padding:0.5em;
+	margin:0 auto;
+	width:100%;
+}
+
+section{
+	text-align: center;
+}
+h2+div{
+	background-color: green;
+	text-align:center;
+}
+h1, h2{
+	text-align: center;
+	color:#791F0B;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a.button{
+	color: #ffffff;
+}
+
+a.button:hover{
+	background-color: #DEA4EA;
+	text-shadow: 3px 3px #333;
+}
+
+
+.button{
+	background-color: #89D742;
+	padding:0.5em;
+	display:block;
+	margin:0.5em 0;
+}
+
+img{
+	width:80%;
+	height:80%;
+}
+
+/*
+==============================================
+CSS3 ANIMATIONS
+
+==============================================
+*/
+
+
+
+
+
+
+/*
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+@media screen and (min-width:550px){
+	img{
+		width: auto;
+	}
+	.button{
+		display: inline-block;
+		padding: .5em;
+		border-radius: 10px 0 10px 0;
+		box-shadow: 1px 1px 1px #333;
+	}
+	.button:hover{
+		box-shadow: 3px 3px 2px #333;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */

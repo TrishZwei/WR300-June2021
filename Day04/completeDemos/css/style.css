@@ -1,0 +1,219 @@
+/*apply natural box model*/
+* {box-sizing: border-box; }
+
+body{
+	background-color: #F4F4F4;
+	font-family: 'Trebuchet', sans-serif;
+	font-size: 18px;
+	line-height: 2;
+	color: #555555;
+	font-weight: bold;
+	padding:0.5em;
+	margin:0 auto;
+	width:100%;
+}
+
+section{
+	text-align: center;
+}
+h2+div{
+	background-color: green;
+	text-align:center;
+}
+h1, h2{
+	text-align: center;
+	color:#791F0B;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a.button{
+	color: #ffffff;
+	transition: all 1s ease-out 0s;
+
+}
+
+a.button:hover{
+	background-color: #DEA4EA;
+	text-shadow: 3px 3px #333;
+}
+
+
+.button{
+	background-color: #89D742;
+	padding:0.5em;
+	display:block;
+	margin:0.5em 0;
+}
+
+img{
+	width:80%;
+	height:80%;
+}
+
+/*
+==============================================
+CSS3 ANIMATIONS
+
+==============================================
+*/
+
+/*
+==============================================
+slideUp
+==============================================
+*/
+@keyframes slideUp {
+	0%{
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}
+	100%{
+		transform: translateY(0%);
+	}	
+}
+.slideUp{
+	animation-name: slideUp;
+	animation-duration: 1s;
+}
+
+/*
+==============================================
+fadeIn
+==============================================
+*/
+@keyframes fadeIn{
+	0%{
+		transform: scale(0);
+		opacity: 0;
+	}
+	60%{
+		transform: scale(1.1);
+	}
+	80%{
+		transform: scale(.9);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.fadeIn{
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+/*
+==============================================
+pulse
+==============================================
+*/
+@keyframes pulse{
+	0%{
+		transform:scale(.9);
+		opacity:.7;
+	}
+	50%{
+		transform:scale(1);
+		opacity:1;
+	}
+	100%{
+		transform:scale(.9);
+		opacity:.7;
+	}
+}
+.pulse{
+		animation-name:pulse;
+		animation-duration:1s;
+		animation-iteration-count:infinite;
+	}
+/*
+==============================================
+floating
+==============================================
+*/
+@keyframes float{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform:translateY(8%);
+	}
+	100%{
+		transform:translateY(0);
+	}
+}
+.float{
+	animation-name: float;
+	animation-duration: 3.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+/*
+==============================================
+tossing
+==============================================
+*/
+@keyframes toss{
+	0%{
+		transform: rotate(-4deg);
+	}
+	50%{
+		transform: rotate(4deg);
+	}
+	100%{
+		transform: rotate(-4deg);
+	}
+}
+.toss{
+	animation-name: toss;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+}
+/*
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+@media screen and (min-width:550px){
+	img{
+		width: auto;
+	}
+	.button{
+		display: inline-block;
+		padding: .5em;
+		border-radius: 10px 0 10px 0;
+		box-shadow: 1px 1px 1px #333;
+	}
+	.button:hover{
+		box-shadow: 3px 3px 2px #333;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
