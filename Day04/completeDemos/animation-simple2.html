@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple Animations</title>
+	<style type="text/css">
+		.parent{
+			background-color: hsla(200,100%, 20%); /*hue, saturation, light, alpha*/
+			width: 400px;
+			height: 400px;
+		}
+
+		.child{
+			background-color: red;
+			height: 50%;
+			width: 50%;
+			animation: left-to-right 1s ease-in forwards infinite alternate; /*name, duration, easing, direction, iterations, delay, */
+		}
+
+		.parent:hover .child{
+			/*when we hover over the parent, we want the child to change shape*/
+			animation-play-state: paused ;
+
+		}
+
+		@keyframes left-to-right{
+			/*0% is what our default properties are, but if we specify what we want it makes for a more performat animation*/
+			0%{
+				transform: translateX(0%);
+			}
+
+			33%{
+				transform: translateY(100%);
+			}
+
+			66%{
+				transform: translateX(100%) translateY(100%);
+			}
+
+			100% {
+				transform: translateX(100%);
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child"></div>
+		
+	</div>
+
+
+</body>
+</html>
