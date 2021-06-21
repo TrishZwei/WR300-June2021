@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flexbox is Amazing</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+
+		body{
+			font-family: verdana;
+		}
+
+		@media screen and (min-width: 480px){
+			body{
+				background-color: #333;
+				color: white;
+			}
+
+			.even-columns{
+				display: flex;
+			}
+
+/*			.col{
+				width: 33.333%;
+			}
+*/
+
+/*			.col{
+				width: 100%;
+			}*/
+
+			.even-columns > *{
+				width: 100%;
+				padding: .5em;
+			}
+
+
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Flexbox is Amazing</h1>
+	<h2>Some great things you can do with flexbox</h2>
+	<div class="even-columns">
+		<div class="col">
+			<h3>Lorem, ipsum dolor</h3>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>		
+		<div class="col">
+			<h3>Quaerat, amet totam!</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="col">
+			<h3>Nemo, odit minus?</h3>
+			<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est tempora?</p>
+		</div>		
+<!-- 		<div class="not-col">
+			<h3>Nemo, odit minus.</h3>
+			<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est tempora?</p>
+		</div>	 -->
+	</div>
+</body>
+</html>
