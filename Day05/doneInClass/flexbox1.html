@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Flexbox Demo 2</title>
+	<!-- for ease styles are here -->
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+
+		body{
+			font-family: verdana;
+		}
+
+		img{
+			width: 50%;
+			max-width: 100%; 
+			float: left;
+		}
+
+		@media screen and (min-width: 480px){
+			body{
+				background-color: #333;
+				color: white;
+			}
+
+			.even-columns{
+				display: flex;
+			}
+
+			.even-columns > *{
+				width: 100%;
+				padding: .5em;
+			}
+
+			.even-columns * h3 ~ p{
+				color: red;
+			}
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="even-columns">
+		<div class="col">
+			<h3>Lorem, ipsum dolor</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>			
+		</div>
+		<section class="col">
+			<h3>Section</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>			
+		</section>		
+		<div class="col">
+			<h3>Duis aute irure</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>			
+		</div>
+		<div class="col">
+			<h3>Sunt in culpa qui?</h3>
+			<img src="images/eduardo-cruz-SPfydyDuzow-unsplash.jpg">
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>			
+		</div>
+		<div class="not-col">
+			<h3>Lorem, ipsum dolor</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>			
+		</div>		
+	</div>
+		<div class="col">
+			<h3>outside</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>			
+		</div>
+</body>
+</html>

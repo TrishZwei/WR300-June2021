@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flexbox Demo 1</title>
+	<!-- for ease styles are here -->
+	<style type="text/css">
+		.parent{
+			display: flex;
+		}
+
+		aside{
+/*			width: 200px;*/
+			flex: 1;
+			order: 2;
+		}
+
+		.child{
+			flex: 2;
+		}
+
+	</style>
+</head>
+<body>
+	<main class="parent">
+		<aside>
+			<nav>
+				<ul id="menu">
+					<li><a href="#">link one</a></li>
+					<li><a href="#">link two</a></li>
+					<li><a href="#">link three</a></li>
+					<li><a href="#">link four</a></li>
+					<li><a href="#">link five super long.....</a></li>										
+				</ul>
+			</nav>
+		</aside>
+		<article class="child">
+			<h1>Hello Flexbox</h1>
+			<section>
+				<p>This is section one. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>
+			<section>
+				<p>This is section two</p>				
+			</section>
+		</article>
+<!-- 		<article class="child">
+			<h1>Hello Flexbox</h1>
+			<section>
+				<p>This is section one. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>
+			<section>
+				<p>This is section two</p>				
+			</section>
+		</article>
+		<article class="child">
+			<h1>Hello Flexbox</h1>
+			<section>
+				<p>This is section one. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>
+			<section>
+				<p>This is section two</p>				
+			</section>
+		</article> -->
+	</main>
+</body>
+</html>
