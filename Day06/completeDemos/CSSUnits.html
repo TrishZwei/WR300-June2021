@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>CSS Units</title>
+	<style type="text/css">
+	/*pixels are always an absolute width
+	  percentage is based off of parent.*/
+
+	  .box{
+	  	background: var(--clr-gradient);
+	  	border:  1px solid black;
+	  	margin: 1px 0;
+	  }
+
+	  .fifty-percent{
+	  	width: 50%;
+	  }
+
+	  .one-hundred-pixels{
+	  	width: 100px;
+	  }
+
+	  .parent{
+	  	width: 135px;
+        border:  1px solid black;
+	  }
+
+	  .fifty-vw{
+	  	/*1vw is 1% of current viewport width*/
+	  	width: 50vw;
+	  }
+
+	  .twenty-five-vh{
+	  	/*1vh is 1% of current viewport height*/
+	  	height: 25vh;
+	  }
+
+
+/*	  body.fs{
+	  	font-size: calc(1vw + .5rem);
+	  }*/
+
+	  .content h3.title{
+	  	font-size: clamp(2rem, 5vw, 5rem);
+	  	/*clamp(min size, ideal size, max size)*/
+	  	background: transparent;
+	  	color: var(--clr-primary);
+	  	clip-path: none;  
+	  	padding: 1rem;
+	  }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {  
+  --clr-primary: #ee6352;
+  --clr-secondary: #d16e8d;
+  --clr-accent: #F7F7FF;
+  --clr-gradient: linear-gradient(-90deg, var(--clr-primary), var(--clr-secondary));
+  --ff-title: verdana, sans-serif;
+  --ff-body: verdana,sans-serif;
+  --fw-body: 300;
+  --fw-bold: 800;
+  --fw-title: 400;
+  --fw-number: 800;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-accent);
+}
+
+:focus {
+  outline: 5px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 0 2em;
+  margin: 0;
+  background: var(--clr-gradient);
+  position: relative;
+/*  z-index: 1000;*/  
+  font-size: calc(1rem + 3vw);
+  font-family: var(--ff-title);
+  font-weight: var(--fw-title);
+  color: white;
+  text-shadow: 3px 5px 10px rgba(0,0,0, .2);
+  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+}
+
+.title span {
+    font-weight: var(--fw-number);
+    color: black;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 5em;
+    top: -30%;
+    z-index: -1;
+    opacity: .25
+  }
+</style>
+</head>
+<body class="fs">
+	<h1 class="title">CSS Units<span>CSS Units</span></h1>
+	<div class="fifty-percent box">50%</div>
+	<div class="one-hundred-pixels box"> 100px</div>
+	<div class="twenty-five-vh box">25vh</div>
+	<hr>	
+	<div class="parent">
+		<div class="fifty-percent box">50%</div>
+		<div class="one-hundred-pixels box">100px</div>
+	</div>
+	<hr>
+	<div class="parent">
+		<div class="fifty-percent box">50%</div>
+		<div class="fifty-vw box">50vw</div>
+		<div class="twenty-five-vh box">25vh</div>
+	</div>	
+<div class="content">
+	<h3 class="title">A catchy title here</h3>
+	<p>Some cool content goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p>
+</div>
+</body>
+</html>

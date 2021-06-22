@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Display Property</title>
+	<style type="text/css">
+		#div-1{
+			background-color: red;
+			display: block;
+		}
+		#div-2{
+			background-color: green;
+		}
+
+		#span-1{
+			background-color: cadetblue;
+			display: inline;
+		}
+		#span-2{
+			background-color: rebeccapurple;
+		}
+
+		#my-image{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="div-1">This is a div</div>
+	<span id="span-1">This is a span</span>
+	<img id="my-image" src="https://source.unsplash.com/xfngap_DToE">
+	<span id="span-2">This is another span</span>
+	<div id="div-2">This is another div</div>
+
+<!-- 
+display block forces a new line above and below and takes up the full width.
+display inline takes up the minimum amount possible
+display inline-block is a combination of the two. Can take width and height, can take margins where inline cannot.
+display none removes element from flow. It takes no space
+
+display flex
+display grid
+
+</body>
+</html>
