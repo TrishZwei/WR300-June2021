@@ -1,0 +1,126 @@
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	font-size: 100%;
+	font-family: Verdana, sans-serif;
+	/* 19px / 16px  */
+	padding: 1.1875em;
+	line-height: 1.2; /*120% 1.2em 20px*/
+}
+
+header, footer{
+	background-color: #999;
+	color: white;
+	margin: 0;
+	padding: 1em;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+a{
+	display: block;
+	text-decoration: none;
+	background-color: #dedede;
+	color: black;
+	padding: 1.125em;
+	transition: all 1s ease-out 0s; 
+	/*0s delay the color change transition is nice*/
+}
+
+a:hover{
+	background-color: #929292;
+}
+
+h2{
+	/* 30/16 */
+	font-size: 1.875em;
+}
+
+h3{
+	 /* 24/16 */
+	font-size: 1.5em;
+}
+
+h4{
+	/* 20/16 */
+	font-size: 1.25em;
+}
+
+fieldset{
+	border: 2px solid black;
+	margin-top: 1.25em;
+	padding: .625em;
+}
+
+label{
+	display: block;
+	padding:  .5em 0 .24em 0;
+}
+
+input{
+	display: block;
+	padding: .3125em;
+	width: 95%;
+}
+
+button{
+	width: 40%;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+small{
+	text-align: center;
+	display: block;
+	font-size: .5625em;
+	padding: 1.125em;
+	margin-top: 1.25em;
+}
+
+/* TODO: change px to em */
+@media screen and (min-width: 882px){
+
+	body{
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	main{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	main section{
+		width: 63%;
+	}
+
+	main article img{
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+
+	aside{
+		width: 35%;
+		flex-direction: column;
+		background-color: #EDEDED;
+		order:  -1;
+	}
+
+	aside section,
+	aside section:first-of-type{
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	footer article{
+		width: 23%;
+		display: inline-block;
+	}
+
+}
