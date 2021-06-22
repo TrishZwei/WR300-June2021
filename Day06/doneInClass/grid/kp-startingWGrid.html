@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Grid Made Simple</title>
+	<style type="text/css">
+	
+
+
+	
+
+	/*cool quick styles for page not related to grid*/	
+	*,
+	*::before,
+	*::after {
+	  box-sizing: border-box;
+	}
+
+	:root {  
+	  --clr-primary: #ee6352;
+	  --clr-secondary: #d16e8d;
+	  --clr-accent: #F7F7FF;
+	  --clr-gradient: linear-gradient(-90deg, var(--clr-primary), var(--clr-secondary));
+	  --ff-title: verdana, sans-serif;
+	  --ff-body: verdana,sans-serif;
+	  --fw-body: 300;
+	  --fw-bold: 800;
+	  --fw-title: 400;
+	  --fw-number: 800;
+	}
+
+	body {
+	  min-height: 100vh;
+	  font-family: var(--ff-body);
+	  font-weight: var(--fw-body);
+	  font-size: 1.25rem;
+	}
+
+	a {
+	  color: inherit;
+	}
+
+	a:hover,
+	a:focus {
+	  color: var(--clr-accent);
+	}
+
+	:focus {
+	  outline: 5px solid var(--clr-accent);
+	  outline-offset: 3px;
+	}
+
+	.title{
+	  text-align: center;
+	  text-transform: uppercase;
+	  padding: 1em 0 2em;
+	  margin: 0;
+	  background: var(--clr-gradient);
+	  position: relative;
+	  font-size: calc(1rem + 3vw);
+	  font-family: var(--ff-title);
+	  font-weight: var(--fw-title);
+	  color: white;
+	  text-shadow: 3px 5px 10px rgba(0,0,0, .2);
+	  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+	}
+
+	.title span {
+	    font-weight: var(--fw-number);
+	    color: black;
+	    display: inline-block;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    font-size: 5em;
+	    top: -30%;
+	    z-index: -1;
+	    opacity: .25
+	  }
+
+	h2.sub-title{ text-align: center;}
+	</style>
+
+</head>
+<body>
+	<h1 class="title">CSS Grid made simple<span>GRID</span></h1>
+	<h2 class="sub-title">A quick start for grid</h2>
+<div class="columns">
+	<div>
+	    <h2>Lorem, ipsum dolor.</h2>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ullam at optio totam ab est ratione, sed, illo doloremque dignissimos vero voluptatum dolore corporis possimus eos, nobis alias consequatur vel!sit amet consectetur, adipisicing elit. Eligendi corrupti sit ipsum totam perspiciatis laudantium sequi officiis eveniet error minus.</p>
+	  </div>
+	  <div>
+	    <h2>Optio, sit excepturi.</h2>
+	    <p>Itaque, ab dolor? Quis architecto non obcaecati earum optio ipsum, magni voluptate repudiandae neque consequatur, quibusdam doloremque in libero maiores.</p>
+	  </div>
+	  <div>
+	    <h2>Alias, quae? Tempora!</h2>
+	    <p>Nisi velit laborum, sequi sit perferendis, ea exercitationem ipsa officiis inventore tenetur assumenda! Consequuntur accusantium quibusdam molestias nam, veritatis labore!</p>
+	  </div>
+</div>
+
+</body>
+</html>
