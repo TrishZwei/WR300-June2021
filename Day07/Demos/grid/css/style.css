@@ -1,0 +1,159 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-size: 100%;
+	font-family: sans-serif;
+	/* 19px/16px */
+	padding:1.1875em;
+	line-height: 1.2; 
+}
+header, footer{
+	background-color: #999;
+	color: white;
+	margin: 0;
+	padding: 1em;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+a{
+	display: block;
+	text-decoration: none;
+	background-color: #dedede;
+	color: black;
+	/* 18px/16 */
+	padding: 1.125em;
+	transition: all 1s ease-out 0s;
+}
+a:hover{
+	background-color: #929292;
+}
+h2{
+	/* 30/16 */
+	font-size: 1.875em;
+}
+h3{
+	/* 24/16 */
+	font-size: 1.5em;
+}
+h4{
+	/* 20/16 */
+	font-size: 1.25em;
+}
+fieldset{
+	border: 2px solid black;
+	/* 20/16 */
+	margin-top: 1.25em;
+	/* 10/16 */
+	padding: .625em;
+}
+label{
+	display: block;
+	/* 8px 0 4px 0 */
+	padding: .5em 0 .24em 0;
+}
+input{
+	display: block;
+	/* 5/16 */
+	padding:.3125em;
+	width: 95%;
+}
+button{
+	/* 480px/1200px x 100 */
+	width: 40%;
+	padding: 1em;
+	margin-top: 1em;
+}
+small{
+	text-align: center;
+	display: block;
+	/* 9/16 */
+	font-size: .5625em;
+	/* 18/16 */
+	padding: 1.125em;
+	/* 20/16 */
+	margin-top: 1.25em;
+}
+/*  +++++++++++++++++++++ mmedia queries ++++++++ */
+@media screen and (min-width:716px){
+	nav ul{
+		display:flex;
+	}
+	img {
+    width: 45%;
+    float: left;
+    margin: 0 1em 1em 0;
+    }
+    aside{
+    	display:flex;
+    	justify-content: space-evenly;
+    }
+    aside img{
+    	width: 100%;
+    }
+    aside section:first-of-type{
+    	width: 40%;
+    }
+    aside section:last-of-type{
+    	background-color: #333;
+    	color: white;
+    	text-align: center;
+    }
+    footer{
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: space-around;
+    }
+    footer article{
+    	width: 48%;
+    }
+}
+@media screen and (min-width:882px){
+	body{
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	main{
+		display: flex;
+		justify-content: space-between;
+	}
+	main section{
+		/* 756/1200 */
+		width: 63%;
+	}
+	aside{
+		/* 420px/1200 */
+		width: 35%;
+		flex-direction: column;
+		/* you can do the same with:  display:block; */
+		background-color: #ededed;
+	}
+	aside section,
+	 aside section:first-of-type{
+		width: 95%;
+		margin: 0 auto;
+	}
+	aside{
+		order: -1;
+	}
+	footer article{
+		width: 23%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */

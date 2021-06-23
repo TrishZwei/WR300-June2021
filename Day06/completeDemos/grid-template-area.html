@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grid Template Areas</title>
+	<style type="text/css">
+	@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
+		body {
+		  font-family: "Merriweather", serif;
+		  font-size: 1rem;
+		  font-weight: 300;
+		  color: #252525;
+		  line-height: 1.6;
+		  display: grid;
+		  /*kept this long hand*/
+		  grid-template-rows: 10em 50vh auto 10em;
+		  grid-template-columns: 1fr 5fr 2fr 1fr; /*4 columns areas are named below, each area listed in the columns and in their respective rows . represent empty content areas*/
+		  grid-template-areas: "header header header header" "hero hero hero hero" ". main sidebar ." "footer footer footer footer ";
+		   grid-column-gap: 1.5em; /*specifying the column gap, where gap alone would put space between all elements*/
+		}
+
+		header{
+			grid-area:  header;
+		}
+
+		header,footer{
+			background: #333;
+			color: yellow;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+.header-title,
+.footer-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 2.875rem;
+  color: #e9d20f;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.hero {
+  grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.hero-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 6rem;
+  color: #252525;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-family: "Merriweather", serif;
+  font-size: 2.875rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+
+		main{
+			grid-area:  main;
+		}
+
+aside {
+  grid-area: sidebar;
+  background: #e8e8e8;
+  padding: 2em;
+}
+		footer{
+			grid-area: footer;
+		}
+
+.card {
+  display: grid;
+/*  longhand:
+  grid-template-columns:  1fr 3 fr;
+  grid-template-rows:  min-content auto;
+  shortcut: ;	
+  */
+  grid-template: "img title" min-content "img content" auto/1fr 3fr;
+  grid-column-gap: 1.5em; /*specifying the column gap, where gap alone would put space between all elements*/
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+.card-title {
+  grid-area: title;
+  margin: 0;
+  font-weight: 300;
+}
+
+.card-content {
+  grid-area: content;
+}
+.card-content a {
+  color: #e9d20f;
+  font-size: 1.1em;
+}
+
+
+
+	</style>
+</head>
+<body>
+<header>
+  <h1 class="header-title">CSS Grid - grid-template-areas</h1>
+</header>
+
+<div class="hero">
+  <h1 class="hero-title">Grid areas</h1>
+  <p class="hero-subtitle">Making life easier</p>
+</div>
+
+<main>
+  <h1>From the blog</h1>
+  <div class="card">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" alt="" class="card-img">
+    <h2 class="card-title">Blog post title</h2>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+      <a href="">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" alt="" class="card-img">
+    <h2 class="card-title">Blog post title</h2>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+      <a href="">Read more</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" alt="" class="card-img">
+    <h2 class="card-title">Blog post title</h2>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat.</p>
+      <a href="">Read more</a>
+    </div>
+  </div>
+
+
+</main>
+
+<aside>
+  <h1>Sidebar stuff</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere semper urna, ut pellentesque sem fermentum vel. Mauris luctus quis lectus nec luctus. Donec ut diam et neque eleifend varius sed quis erat. In tempor pharetra felis at fermentum. Maecenas iaculis neque orci, sit amet sodales quam venenatis sit amet. Praesent eu enim nec velit bibendum accumsan a sed tellus. Aenean sed justo a tortor hendrerit imperdiet efficitur nec risus. Morbi gravida mi quis ultrices elementum. Pellentesque fermentum sodales sagittis. Sed vel efficitur nisl. Ut congue sodales sapien. Duis ultricies felis nunc, eu semper est tincidunt eu. Curabitur faucibus luctus eros, eget semper mauris dictum vel.</p>
+</aside>
+
+<footer>
+  <h1 class="footer-title">the end</h1>
+</footer>
+</body>
+</html>

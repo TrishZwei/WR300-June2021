@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio Demo</title>
+	<style type="text/css">
+		@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #353535;
+  color: #c4c4c4;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+Navigation
+*/
+
+.sidebar {
+  background: #4f4f4f;
+  flex: 1 1 20%;
+  min-width: 300px;
+  padding: 3em;
+}
+
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+.nav-item {
+  color: #737373;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+}
+
+
+.nav-item.active {
+  color: #c4c4c4;
+}
+
+.main-content {
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+}
+
+.portfolio {
+  display: grid;
+  height: 100%; /*because of display: grid height property works as expected*/;
+  /*fr stands for fraction and it fills up the available space*/
+  grid-template-rows: repeat(8, 1fr); /*you could give this a name for this*/
+  grid-template-columns: repeat(5, 1fr);
+  /*for demo purposes*/
+/*  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);*/
+  grid-gap: 20px;
+}
+
+.portfolio-item {
+  background: #f96855;
+  color: #c4c4c4;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 10;
+}
+
+.portfolio-item.small {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.portfolio-item.medium {
+  grid-row: span 2; /*spans 2 rows*/ 
+  grid-column: span 2; /*spans 2 columns*/
+}
+
+.portfolio-item.large {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.portfolio-item.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.portfolio-item.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.portfolio-item:hover {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+}
+
+.two {
+  background-color: transparent;
+  background-image: url(https://unsplash.it/800/600);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.two::before {
+  content: "";
+  display: block;
+  background: #353535;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.two:hover::before {
+  opacity: 0.2;
+}
+
+@media (min-width: 1500px) {
+	.logo {
+    margin-bottom: 5em;
+  	}
+
+  .nav-item {
+    display: block;
+    margin: 7vh 0;
+  }
+}
+
+
+
+	</style>
+</head>
+<body>
+<div class="sidebar">
+  <div class="logo">Awesome<span>Portfolio</span></div>
+  <nav>
+    <a href="" class="nav-item">Home</a>
+    <a href="" class="nav-item">About</a>
+    <a href="" class="nav-item active">Portfolio</a>
+    <a href="" class="nav-item">Contact</a>
+  </nav>
+</div>
+<div class="main-content">
+  <div class="portfolio">
+    <div class="portfolio-item medium">one</div>
+    <div class="portfolio-item large two">two</div>
+    <div class="portfolio-item medium">three</div>
+    <div class="portfolio-item small">four</div>
+    <div class="portfolio-item tall">five</div>
+    <div class="portfolio-item wide">six</div>
+    <div class="portfolio-item wide">seven</div>
+    <div class="portfolio-item medium">eight</div>
+  </div>
+</div>
+</body>
+</html>
