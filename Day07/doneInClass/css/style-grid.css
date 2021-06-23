@@ -1,0 +1,164 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 100%;
+	font-family: sans-serif;
+	padding: 1.1875em;
+	line-height: 1.2;
+	display: grid;
+}
+
+/*fixed image issues first*/
+
+img{
+	max-width: 100%;
+}
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	margin-bottom: 1em;
+}
+
+
+.video iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+h1{
+	text-align: center;
+}
+
+nav ul, section ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+
+main article {
+	text-align: center;
+}
+
+main article p, main article form{
+	text-align: left;
+}
+
+ul li a{
+	display: block;
+	border: 1px solid #333;
+	padding: .3em;
+}
+
+label, input{
+	display: block;
+	margin: .3em 0 .3em 5%;
+	width: 90%;
+}
+
+button{
+	float: right;
+	margin-right: 5%;
+	margin-top: .5em;
+}
+
+.gallery{
+	text-align: center;
+}
+
+.gallery p{
+	border-bottom: 2px solid black;
+	padding: 1em .5em;
+	background-color: black;
+	color: white;
+	margin: -3px auto 1em;
+	max-width: 400px;
+}
+
+/*TODO: change px to em*/
+@media screen and (min-width: 600px){
+
+	body{
+		grid-template-rows: 10em auto auto auto 3em; /*how big are my rows?*/
+		grid-template-columns: 1fr 5fr 2fr 1fr; /*4 column areas named below*/
+		grid-template-areas: "header header header header" "content content content content" "footer footer footer footer" "end end end end" ;
+	}
+
+	header{
+		grid-area: header;
+		display: grid;
+		grid-template-rows: 7em auto;
+	}
+
+	nav ul{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(17%, 1fr));
+		grid-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	main{
+		grid-area: content;
+		display: grid;
+		grid-template-columns: 3fr 6fr;
+		grid-template-areas: "sidebar main" ;
+		grid-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	main article img{
+		float: left;
+		margin: 0 1em 1em 0;
+		width: 40%;
+	}
+
+	main section{
+		grid-area: main;
+	}
+
+	main aside{
+		grid-area: sidebar;
+	}
+
+	footer{
+		grid-area: footer;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1em;
+	}
+
+	small{
+		grid-area: end;
+	}
+
+}
+
+
+@media screen and (min-width: 900px){
+	section.gallery{
+		display: grid;
+		grid-template-areas: "title title" "img img";
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1em;
+	}
+
+	.gallery h3{
+		grid-area: title;
+	}
+
+	footer{
+		grid-template-columns: repeat(4, 1fr);	
+	}
+
+
+}
+
+
