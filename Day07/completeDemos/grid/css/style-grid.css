@@ -53,6 +53,25 @@ button{
 	margin-top: .5em;
 }
 
+
+.video{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	margin-bottom: 1em;
+}
+
+
+.video iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
 .gallery{
 	text-align: center;
 }
