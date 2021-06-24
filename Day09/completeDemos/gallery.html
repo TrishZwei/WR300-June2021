@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>We Love Coffee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<!-- favicons go here -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="manifest" href="favicons/manifest.json">
+<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicons/favicon.ico">
+<meta name="msapplication-config" content="favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">	
+
+</head>
+<body class="cf">
+<header id="main-head">
+	<h1>We Love Coffee</h1>
+	<nav id="main-nav" role="navigation">
+	<h2 class="hide">Site Navigation</h2>
+	<ul class="cf">
+		<li><a href="index.html">Home<i class="demo-icon icon-home"></i></a></li>
+		<li><a href="about.html">About<i class="demo-icon icon-coffee"></i></a></li>
+		<li><a href="gallery.html">Gallery<i class="demo-icon icon-picture"></i></a></li>
+		<li><a href="deals.html">Deals<i class="demo-icon icon-dollar"></i></a></li>
+	</ul>	
+	</nav>
+</header>
+<main>
+<section class="intro">
+<h2>Coffee Gallery</h2>
+<p>View the artistry of our baristas.</p>
+</section>
+<section>
+<h3>Using the Picture Element</h3>
+<p>These pictures change their source based off the media query inside the markup</p>
+<div class="pictures">
+<picture>
+	<!-- [if IE 9]><video style="display:none;"><![endif]-->
+	<source srcset="images/full/001.jpg" media="(min-width:850px)">
+	<source srcset="images/med/001.jpg" media="(min-width:580px)">
+	<!-- [if IE 9]></video><![endif]-->
+	<img src="images/thumb/001.jpg" alt="coffee no. 1">
+	<p>Coffee No. 1</p>
+</picture>
+<picture>
+	<!-- [if IE 9]><video style="display:none;"><![endif]-->
+	<source srcset="images/full/002.jpg" media="(min-width:850px)">
+	<source srcset="images/med/002.jpg" media="(min-width:580px)">
+	<!-- [if IE 9]></video><![endif]-->
+	<img src="images/thumb/002.jpg" alt="coffee no. 2">
+	<p>Coffee No. 2</p>
+</picture>
+<picture>
+	<!-- [if IE 9]><video style="display:none;"><![endif]-->
+	<source srcset="images/full/003.jpg" media="(min-width:850px)">
+	<source srcset="images/med/003.jpg" media="(min-width:580px)">
+	<!-- [if IE 9]></video><![endif]-->
+	<img src="images/thumb/003.jpg" alt="coffee no. 3">
+	<p>Coffee No. 3</p>
+</picture>
+</div>
+</section>
+<section>
+	<h3>Images with the Figure Element</h3>
+	<p>These images are always the full sized picture, just responding to fit the container width.</p>
+	<figure>
+		<img src="images/full/004.jpg" alt="Coffee no. 4">
+		<figcaption>Coffee No. 4</figcaption>
+	</figure>
+	<figure>
+		<img src="images/full/005.jpg" alt="Coffee no. 4">
+		<figcaption>Coffee No. 5</figcaption>
+	</figure>
+	<figure>
+		<img src="images/full/006.jpg" alt="Coffee no. 4">
+		<figcaption>Coffee No. 6</figcaption>
+	</figure>
+</section>
+</main>
+<aside class="cf">
+<div id="imgbanner">
+	<h3>Floated to the Right</h3>
+	<p>In this example, the image is floated to the right and its container's overflow is set to hidden, so the image will be cropped from the left as the viewport reduces in size.</p>
+	<img src="images/coffeebanner1.jpg" alt="coffee and roasted beans">
+</div>
+<h3 id="imgbkbanner">Background Image</h3>
+<p>The image above is a background image that gets cut off left and right as you scale down the size of the window.</p>
+</aside>
+<footer id="page-foot">
+	<small>&copy; 2017 We Love Coffee</small>	
+</footer>
+<!-- javascript functions that need to be called after page is loaded and DOM is ready -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>First JS Demo</title>
+	<style type="text/css">
+		body{
+			font-family: Verdana;
+		}
+	</style>
+<!-- you can  put scripts in the head -->
+<script>
+	//this is a string variable. 
+	var myString = 'Hello World!';
+	//writes to the document
+	document.write(myString);
+
+	//summons the alert box
+	//window.alert(myString);	
+
+	//passes to the console
+	console.log(myString);
+	myString = 'Hi there!';
+
+</script>
+</head>
+<body>
+<p>Mostly nothing to see here...</p>
+<script>
+	function myFirstFunction(){
+		alert(myString);
+	}	
+
+	//functions do not run unless they are called
+	myFirstFunction();
+
+	var words = 'new words';
+
+	function mySecondFunction(words){
+		//this will alert the value of words. The parameter is a variable that stores a value specific to the function that you can only access within the function.
+		alert(words);
+
+	}
+
+	mySecondFunction("I'm an argument because I am a value.");
+	mySecondFunction(myString+' '+words);	
+
+
+
+</script>
+
+</body>
+</html>

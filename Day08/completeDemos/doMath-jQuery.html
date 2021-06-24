@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Do Math</title>
+	<style type="text/css">
+		body{
+			font-family: Verdana;
+			width: 300px;
+			margin: 5px auto;
+			font-size: 20px;
+		}
+
+		input{
+			padding: .5em;
+			margin: .5em;
+		}
+
+		.calculator{
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+<h1>Do Math</h1>
+<div class="calculator">
+	<input type="number" id="num-one"><br>
+	<select id="operator">
+		<option value="">Please Choose</option>
+		<option value="add">Plus</option>
+		<option value="sub">Minus</option>
+		<option value="mul">Times</option>
+		<option value="div">Divided by</option>	
+	</select>
+	<br>
+	<input type="number" id="num-two"><br>
+	<hr>
+	<div id="output">&nbsp;</div>
+<!-- 	
+<input type="submit" value="Add" onclick="doMath();" id="calculate">
+ -->	<!-- onclick in your html is a bad practice -->
+	<input type="submit" value="Calculate" id="calculate">
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+//jQuery
+
+function doMath(){
+var numOne = Number($('#num-one').val());
+var numTwo = Number($('#num-two').val());
+//check to see if they have a numeric format
+//use isNaN() returns true or false if the value is a numeric format
+//example: '55' is a numeric format, '55b' is not. '55b' returns true
+if(isNaN(numOne) || isNaN(numTwo)){
+	
+	if(isNaN(numOne)){
+		//reassigning the value from an empty string to have new info.
+		message = 'The first input is not a number. Input a number and recalculate. ';
+	}
+
+	if(isNaN(numTwo)){
+		message += 'The second input is not a number. Input a number and recalculate.';
+	}
+	// alert(message);
+
+}else{
+var opVal = $('#operator').val();
+//alert(opVal);
+
+	if(opVal == 'add'){
+		message = numOne + numTwo;
+	}else if(opVal == 'sub'){
+		message = numOne - numTwo
+	}else if(opVal == 'mul'){
+		message = numOne * numTwo;
+	}else if(opVal == 'div'){
+		message = numOne/numTwo;
+	}else{
+		alert('choose an operator');
+		return false; 
+	}
+
+}
+
+var outputDiv = $('#output');
+
+if(message>20){
+
+	outputDiv.css({color:'red', backgroundColor:'yellow'}); 
+
+}else{
+
+	outputDiv.css({color:'black', 'background-color':'white'}); 	
+
+}
+
+
+//alert(numOne + numTwo);
+outputDiv.html('<p>'+message+'</p>');
+
+
+
+
+}//end doMath()
+
+$('#calculate').click(doMath);
+//alternate example: document.querySelector('#calculate')
+//alternate example: document.body.children[1].children[7];
+
+// var testEle = document.body.children[1].children[7];
+// console.log(testEle);
+
+</script>
+
+</body>
+</html>

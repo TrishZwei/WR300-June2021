@@ -1,0 +1,549 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*clear fix*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+@-webkit-viewport{
+	width: device-width;
+	}
+@-moz-viewport{
+	width: device-width;
+	}
+@-ms-viewport{
+	width: device-width;
+	}
+@-o-viewport{
+	width: device-width;
+	}
+@viewport{
+	width: device-width;
+	}
+
+
+@font-face {
+  font-family: 'coffeeshop';
+  src: url('../font/coffeeshop.eot?57553667');
+  src: url('../font/coffeeshop.eot?57553667#iefix') format('embedded-opentype'),
+       url('../font/coffeeshop.woff2?57553667') format('woff2'),
+       url('../font/coffeeshop.woff?57553667') format('woff'),
+       url('../font/coffeeshop.ttf?57553667') format('truetype'),
+       url('../font/coffeeshop.svg?57553667#coffeeshop') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'coffeeshop';
+    src: url('../font/coffeeshop.svg?57553667#coffeeshop') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "coffeeshop";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-heart:before { content: '\e800'; } 
+.icon-home:before { content: '\e801'; } 
+.icon-picture:before { content: '\e802'; } 
+.icon-cancel-circled:before { content: '\e804'; } 
+.icon-menu:before { content: '\f0c9'; } 
+.icon-mail-alt:before { content: '\f0e0'; } 
+.icon-coffee:before { content: '\f0f4'; } 
+.icon-dollar:before { content: '\f155'; } 
+.icon-map:before { content: '\f279'; } 
+
+/*add viewport css*/
+
+html{
+	background-color: #141412;
+}
+
+body{
+	font-size: 18px;
+	background-color: #F7F5E7;
+	width: 98%;
+	min-width: 320px;
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: "Arvo", serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+font-family: 'Josefin Slab', serif;
+color: #441D0D;
+margin: .5em 0;
+font-size: 1.4em;
+}
+
+h1{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 1.8em;
+}
+
+h3{
+	font-size: 1.5em;
+}
+
+.hide{
+	display: none;
+}
+
+a{
+	text-decoration: none;
+	color: #BE815A;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #121212;
+}
+
+#main-nav ul{
+	margin: 0;
+	padding: 0; 
+}
+
+#main-nav ul li a{
+	background-color: #FEAD78;
+	color: white;
+	display: block;
+	margin: .5em .25em;
+	padding: 1.25em;
+	text-align: center;
+}
+
+#main-nav ul li a:hover{
+	background-color: #FEC39C;
+	text-decoration: none; 
+}
+
+#main-head{
+	background-color: #A45018;
+}
+
+
+#main-head h1{
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding: 1em 0;
+	margin: 0;
+	font-size: 2.5em;
+}
+
+main{
+	background-color: #E8E5CE;
+	padding: 1em .5em;
+	line-height: 1.5em;
+}
+
+main div#slider{
+	text-align: center;
+}
+
+img{
+	max-width: 100%;
+}
+
+figure{
+	margin: 0 auto;
+	text-align: center;
+}
+
+figure img{
+	width: 100%;
+}
+
+aside figure img{
+	max-width: 350px;
+}
+
+.pictures picture{
+	display: inline-block;
+}
+
+.pictures{
+	text-align: center;
+}
+
+#imgbanner{
+	overflow: hidden;
+}
+
+#imgbanner img{
+	float: right;
+	max-width: none;
+}
+
+#imgbkbanner{
+	background: url('../images/coffeebeans.jpg') center no-repeat;
+	color: white;
+	height: 367px;
+	padding: 3em 1em 1em;
+	text-align: center;
+	font-size: 3em;
+}
+
+
+main article h2{
+	color: #BE815A;
+	padding: .6em;
+	line-height: 1.2em;
+}
+
+main section{
+	padding: 0 1em;
+}
+
+main section > section > h3{
+	text-align: center;
+	color: #BE815A;
+	font-weight: bold;
+	padding-top: 1em;
+}
+
+main h2+h3{
+	color: #BE815A;
+	font-style: italic;
+}
+
+main section section div ~ div{
+	font-style: italic;
+}
+
+main section section div:first-of-type{
+	text-align: center;
+	color: rgba(190,129,90,.8);
+}
+
+main section section div:last-of-type{
+	border-bottom: 2px dotted #141412;
+	padding-bottom: 1em;
+}
+
+section.menu-wrapper{
+	background-color: white;
+}
+
+section.menu-wrapper h2{
+	text-align: center;
+	border-bottom: 2px dotted #141412;
+	padding-top: 1em;
+}
+
+main section section:last-of-type{
+	padding-bottom: 2em;
+}
+
+div.map{
+	width: 80%;
+	margin: 0 auto;
+}
+
+form{
+	padding: 1em;
+	margin: 0 0 2em;
+	width: 100%;
+	border: none;
+	position: relative;
+	border-radius: 1em; 
+}
+
+fieldset{
+	width: 100%;
+	border: 2px solid #A45018;
+	margin-bottom: 1.3em;
+	padding: .5em;
+}
+
+input{
+	border-radius: .5em;
+}
+
+input[type="submit"]{
+	cursor: pointer;
+	width: 6em;
+	height: 3em;
+	margin-left: 1em;
+	background-color: rgba(245, 190,154,0.8);
+}
+
+input[type="submit"]:hover{
+	background-color: #a45018;
+	color: white;
+	-moz-appearance: normal;
+	-webkit-appearance: normal;
+	appearance: normal;
+}
+
+label{
+	display: inline-block;
+	padding: .5em .3em;
+	font-variant: small-caps;
+	color: #BE815A;
+}
+
+select{
+	min-width: 170px;
+	padding: 1em;
+	border-radius: .5em;
+}
+
+legend{
+	font-size: 1.2em;
+	color: #903;
+	padding: .3em;
+}
+
+input, textarea{
+font-family: inherit;	
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus{
+	outline: none;
+}
+
+textarea{
+	height: 150px;
+	width: 80%;
+}
+
+input[type="radio"]+label,
+input[type="checkbox"]+label{
+font-variant: normal;
+color: #666;
+}
+
+/*change style for placeholder text*/
+
+::-webkit-input-placeholder{
+	color: #444;
+	font-style: italic;
+}
+
+/*ff18*/
+:-moz-placeholder{
+	color: #444;
+	font-style: italic;
+}
+
+/*ff19+*/
+::-moz-placeholder{
+	color: #444;
+	font-style: italic;
+}
+
+/*ie*/
+:-ms-placeholder{
+	color: #444;
+	font-style: italic;
+}
+
+/*change the look of required fields*/
+input:required{
+	border: 2px solid #666;
+	background-color: rgba(245,190,154,0.5);
+}
+
+/*styles for JS errors*/
+
+input[type="text"], textarea{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+
+input[type="text"]:focus, textarea:focus{
+	box-shadow: 0 0 5px rgba(245,190,154,0.8);
+	border: 1px solid rgba(245,190,154,0.8);
+	margin: 5px 1px 3px 0;
+	padding: 3px 0 3px 3px;
+}
+
+.no-js #how-much{
+	display: none;
+}
+
+
+aside{
+	padding: 1em .5em;
+}
+
+aside h3{
+	color: #BE815A;
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+aside article{
+	width: 98%;
+	margin: 0 1% 4%;
+}
+
+/*video styles*/
+
+.parent-container{
+	max-width: 600px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.video, .map{
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	padding-top: 30px;
+	margin: 0 auto;
+}
+
+.video iframe, .map iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+video{
+	max-width: 100%;
+	height: auto;
+}
+
+
+#page-foot{
+	background-color: #A45018;
+	color: white;
+	padding: 1.5em .5em;
+	text-align: right;
+}
+
+@media only screen and (min-width: 580px){
+#main-head{
+	background: url('../images/coffeebeans.jpg') center no-repeat;
+}
+
+/*navigation styles*/
+
+main{
+	padding-top: 60px; 
+}
+
+#menu, #main-nav ul li.back-to-top{
+	display: none;
+}
+
+#main-nav{
+	width: inherit;
+	max-width: 1200px;
+	padding: 0;
+	position: absolute;
+	top: 100px;
+	border-bottom: #4E2D26 3px solid;
+}
+
+#main-nav ul{
+	width: 100%;
+	text-align: center;
+	background-color: #A45018;
+}
+
+#main-nav ul li{
+	display: inline-block;
+}
+
+#main-nav ul li a{
+ border-radius: 5px;
+}
+
+aside article, aside section:not(.parent-container){
+	float: left;
+	width: 46%;
+	margin: 0 2% 3%;
+}
+
+
+}/*end media query*/
+
+@media only screen and (min-width: 850px){
+	main{
+		float: left;
+		width: 60%;
+	}
+
+	aside{
+		float: left;
+		width: 40%;
+	}
+
+	aside article, aside section:not(.parent-container){
+		width: 98%;
+		clear: both;
+		float:none;
+	}
+
+	.video{
+		margin-left: 5%; 
+	}
+
+	#page-foot{
+		clear:both;
+	}
+
+}
