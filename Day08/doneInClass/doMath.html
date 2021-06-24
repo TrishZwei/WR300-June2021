@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Do Math</title>
+	<style type="text/css">
+	 body{
+	 	font-family: Verdana;
+	 	width: 300px;
+	 	margin: 5px auto;
+	 	font-size: 1.25em;
+	 }		
+
+	 input{
+	 	display: block;
+	 	padding: .5em;
+	 	margin: .5em auto;
+	 	width: 90%;
+	 }
+
+	 .calculator{
+	 	text-align: center;
+	 }
+
+	</style>
+</head>
+<body>
+	<h1>Do Math</h1>
+	<div class="calculator">
+		<input type="number" id="num-one">
+		+<br>
+		<input type="number" id="num-two">
+		<hr> 
+		<div class="total">0</div>
+		<!-- <input type="button" value="Add" id="sum-num" onclick="doMath();"> -->
+		<input type="button" value="Add" id="sum-num">
+    </div>
+<script type="text/javascript">
+
+	//onclick most simple and straight forward 
+	document.querySelector('#sum-num').onclick = doMath; //no parenthesis here because the event will call the function to run
+
+	function doMath(){
+		//alert('I work!');
+		//grab values from the 2 inputs and add them together put the sum into the total div.
+		let numOne = Number(document.querySelector('#num-one').value);
+		let numTwo = Number(document.querySelector('#num-two').value);
+		//JS favors concatenation over addition
+		console.log(typeof numOne)
+		console.log(typeof numTwo)
+		console.log(numOne + numTwo);
+
+		let total = numOne + numTwo;
+
+		document.querySelector('.total').innerHTML = total;
+
+	}
+
+
+
+</script>
+</body>
+</html>

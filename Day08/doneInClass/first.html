@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>First JS Demo</title>
+	<style type="text/css">
+	 body{
+	 	font-family: Verdana;
+	 }		
+	</style>
+<!-- you can put scripts in the head -->
+	<script type="text/javascript" >
+		'use strict'; //makes sure we start our variables with keywords	
+		//this is a string variable
+		var myString = 'Hello World!';
+		//writes to the document
+		document.write(myString); //this is a bad practice. do not do in production.
+
+		//summons the alert box
+		//alert(myString);
+
+		//passes to the console
+		console.log(myString);
+		myString = 'Hi there!';
+
+		//document.querySelector('p').innerHTML = myString; //does not work because there are no p tags yet.
+
+	</script>
+</head>
+<body>
+	<p>Mostly nothing to see here....</p>
+	<p>paragraph 2</p>
+
+<script type="text/javascript">
+	console.log(document.querySelectorAll('p')); //node list
+	document.querySelectorAll('p')[1].innerHTML = myString; //works because there is a p tag.
+
+
+	function myFirstFunction(){
+		alert(myString);
+	}
+	//functions do not execute their code until called.
+	myFirstFunction();
+
+	let words = 'new words';
+
+	function mySecondFunction(words){
+		//this will alert the value of the parameter: words. This is a local variable.
+		alert(words);
+
+	}
+
+	mySecondFunction("I'm an argument because I am a value.")
+	mySecondFunction(myString+' '+words);
+
+</script>
+</body>
+</html>

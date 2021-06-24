@@ -22,6 +22,8 @@
 	console.log(myString);
 	myString = 'Hi there!';
 
+	document.querySelector('p').innerHTML = myString; //does not work because p is not available.
+
 </script>
 </head>
 <body>
@@ -45,6 +47,7 @@
 	mySecondFunction("I'm an argument because I am a value.");
 	mySecondFunction(myString+' '+words);	
 
+	document.querySelector('p').innerHTML = myString; //works now because p IS available.
 
 
 </script>
