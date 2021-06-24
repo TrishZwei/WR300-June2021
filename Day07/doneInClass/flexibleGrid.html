@@ -5,11 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>A flexible Layout</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-grid.css">
+  <style type="text/css">
+/*   ghost css 
+
+  *{
+      background-color: black;
+      color: green;
+      border: 1px solid red;
+    }
+*/
+
+  </style>
 </head>
 <body>
   <header>
-    <h1>Logo goes here</h1>
+    <h1>Banner Title</h1>
     <nav>
       <ul class="cf">
         <li><a href="#">link 1</a></li>
@@ -60,8 +71,11 @@
           <li><a href="#">link 5</a></li>
         </ul>
       </section>
-      <section>
-        <h3>Images</h3>
+      <section class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xoRbkm8XgfQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+      </section>
+      <section class="gallery">
+        <h3>Gallery</h3>
         <div>
           <img src="https://via.placeholder.com/400x300" alt="">
           <p>caption</p>
