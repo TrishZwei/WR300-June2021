@@ -17,22 +17,6 @@ html {
     clear: both;
 }
 
-@-webkit-viewport{
-	width: device-width;
-	}
-@-moz-viewport{
-	width: device-width;
-	}
-@-ms-viewport{
-	width: device-width;
-	}
-@-o-viewport{
-	width: device-width;
-	}
-@viewport{
-	width: device-width;
-	}
-
 
 @font-face {
   font-family: 'coffeeshop';
@@ -45,17 +29,7 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'coffeeshop';
-    src: url('../font/coffeeshop.svg?57553667#coffeeshop') format('svg');
-  }
-}
-*/
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "coffeeshop";
   font-style: normal;
