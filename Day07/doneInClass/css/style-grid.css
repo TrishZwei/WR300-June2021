@@ -88,8 +88,10 @@ button{
 
 	body{
 		grid-template-rows: 10em auto auto auto 3em; /*how big are my rows?*/
-		grid-template-columns: 1fr 5fr 2fr 1fr; /*4 column areas named below*/
-		grid-template-areas: "header header header header" "content content content content" "footer footer footer footer" "end end end end" ;
+/*		grid-template-columns: 1fr 5fr 2fr 1fr; /*4 column areas named below*/
+/*		grid-template-areas: "header header header header" "content content content content" "footer footer footer footer" "end end end end" ;*/
+		grid-template-columns: 100%; /*4 column areas named below*/
+		grid-template-areas: "header" "content" "footer" "end" ;
 	}
 
 	header{
