@@ -17,22 +17,6 @@ html {
     clear: both;
 }
 
-@-webkit-viewport{
-	width: device-width;
-	}
-@-moz-viewport{
-	width: device-width;
-	}
-@-ms-viewport{
-	width: device-width;
-	}
-@-o-viewport{
-	width: device-width;
-	}
-@viewport{
-	width: device-width;
-	}
-
 
 @font-face {
   font-family: 'coffeeshop';
@@ -45,17 +29,7 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'coffeeshop';
-    src: url('../font/coffeeshop.svg?57553667#coffeeshop') format('svg');
-  }
-}
-*/
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "coffeeshop";
   font-style: normal;
@@ -101,7 +75,6 @@ html {
 .icon-dollar:before { content: '\f155'; } 
 .icon-map:before { content: '\f279'; } 
 
-/*add viewport css*/
 
 html{
 	background-color: #141412;
@@ -169,43 +142,66 @@ a:hover{
 	text-decoration: none; 
 }
 
-/*toggle styles*/
 
-.no-js #menu{
-	display: none;
+/*flyout styles*/
+/*should not make a difference*/
+	#menu:hover{
+		text-decoration: none;
+	}
+
+
+.wrap{
+	position: relative;
+	transition: all 0.5s ease-out;
 }
 
-.js #menu{
-	margin-bottom: 0;
+.wrap.active{
+	left: 14.5em;
 }
 
-.js #main-head #menu a{
-	width: 100%;
-	text-align: center;
-	color: white;
+#menu{
 	display: block;
-	padding: .5em;
-}
-
-
-/*.js #main-head a:hover{
-	background-color: #FEC39C;
+	position: absolute;
+	bottom: 0; /*needs to have #main-head have relative position*/
+	margin: 0;
+	color: white;
 	text-decoration: none;
 }
-*/
+
+nav[role=navigation]{
+	background-color: #4e2d26;
+	clear:  both;
+	overflow: hidden;
+}
+
 
 .js nav[role=navigation]{
-	overflow: hidden;
-	max-height: 0;
+	width: 16em;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left:  -16em;
 }
 
-.js nav[role=navigation].active{
-	max-height: 30em;
+nav[role=navigation] ul{
+	margin: 0;
+	padding: 0;
 }
 
+nav[role=navigation] li a{
+	display: block;
+	padding: 0.8em;
+	width: 96%;
+	color: white;
+}
+
+nav[role=navigation] li a:hover{
+	background-color: #4e2d26;
+}
 
 #main-head{
 	background-color: #A45018;
+	position: relative; /*this was needed for the menu to show up properly*/
 }
 
 
@@ -512,14 +508,6 @@ video{
 @media only screen and (min-width: 580px){
 #main-head{
 	background: url('../images/coffeebeans.jpg') center no-repeat;
-}
-
-/*toggle styles*/
-#menu{
-	display: none;
-}
-#main-nav{
-	max-height: 30em;
 }
 
 #main-nav ul{

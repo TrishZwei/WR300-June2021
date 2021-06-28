@@ -5,24 +5,32 @@
 	<title>We Love Coffee</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styles-anchor.css">
 <!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 <!-- favicons go here -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- normally you would incorporate this into your style sheet -->
+<style type="text/css">
+	html{
+		scroll-behavior: smooth;
+	}
+</style>
 </head>
 <body class="cf">
 <header id="main-head">
 	<h1>We Love Coffee</h1>
-	<nav id="main-nav" role="navigation">
-	<h2 class="hide">Site Navigation</h2>
-	<ul class="cf">
-		<li><a href="index.html">No JS<i class="demo-icon icon-home"></i></a></li>
-		<li><a href="anchor.html">Anchor<i class="demo-icon icon-coffee"></i></a></li>
-		<li><a href="toggle.html">Toggle<i class="demo-icon icon-picture"></i></a></li>
-		<li><a href="flyout.html">Flyout<i class="demo-icon icon-dollar"></i></a></li>
-	</ul>	
-	</nav>
+	<!-- moved nav to bottom -->
+	<h3 id="menu"><a href="#main-nav" title="go to navigation">&darr; Menu</h3>
 </header>
 <main>
 	<!-- create div for slider -->
@@ -72,6 +80,16 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/aBLYSO0DSVI" frameborder="0" allowfullscreen></iframe>
 		</div>
 </aside>
+<nav id="main-nav" role="navigation">
+	<h2 class="hide">Site Navigation</h2>
+	<ul class="cf">
+		<li><a href="index.html">No JS<i class="demo-icon icon-home"></i></a></li>
+		<li><a href="anchor.html">Anchor<i class="demo-icon icon-coffee"></i></a></li>
+		<li><a href="toggle.html">Toggle<i class="demo-icon icon-picture"></i></a></li>
+		<li><a href="flyout.html">Flyout<i class="demo-icon icon-dollar"></i></a></li>
+		<li class="back-to-top"><a href="#">&uarr; Back To Top<i class="demo-icon icon-dollar"></i></a></li>
+	</ul>	
+</nav>
 <footer id="page-foot">
 	<small>&copy; 2017 We Love Coffee</small>	
 </footer>

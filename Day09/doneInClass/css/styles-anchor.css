@@ -17,22 +17,6 @@ html {
     clear: both;
 }
 
-@-webkit-viewport{
-	width: device-width;
-	}
-@-moz-viewport{
-	width: device-width;
-	}
-@-ms-viewport{
-	width: device-width;
-	}
-@-o-viewport{
-	width: device-width;
-	}
-@viewport{
-	width: device-width;
-	}
-
 
 @font-face {
   font-family: 'coffeeshop';
@@ -45,16 +29,7 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'coffeeshop';
-    src: url('../font/coffeeshop.svg?57553667#coffeeshop') format('svg');
-  }
-}
-*/
+
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "coffeeshop";
@@ -101,7 +76,6 @@ html {
 .icon-dollar:before { content: '\f155'; } 
 .icon-map:before { content: '\f279'; } 
 
-/*add viewport css*/
 
 html{
 	background-color: #141412;
@@ -168,41 +142,6 @@ a:hover{
 	background-color: #FEC39C;
 	text-decoration: none; 
 }
-
-/*toggle styles*/
-
-.no-js #menu{
-	display: none;
-}
-
-.js #menu{
-	margin-bottom: 0;
-}
-
-.js #main-head #menu a{
-	width: 100%;
-	text-align: center;
-	color: white;
-	display: block;
-	padding: .5em;
-}
-
-
-/*.js #main-head a:hover{
-	background-color: #FEC39C;
-	text-decoration: none;
-}
-*/
-
-.js nav[role=navigation]{
-	overflow: hidden;
-	max-height: 0;
-}
-
-.js nav[role=navigation].active{
-	max-height: 30em;
-}
-
 
 #main-head{
 	background-color: #A45018;
@@ -514,12 +453,22 @@ video{
 	background: url('../images/coffeebeans.jpg') center no-repeat;
 }
 
-/*toggle styles*/
-#menu{
+/*navigation styles*/
+main{
+	padding-top: 60px; 
+}
+
+#menu, #main-nav ul li.back-to-top{
 	display: none;
 }
+
 #main-nav{
-	max-height: 30em;
+	width: inherit;
+	max-width: 1200px;
+	padding: 0;
+	position: absolute;
+	top: 100px;
+	border-bottom: #4e2d26 3px solid;
 }
 
 #main-nav ul{
@@ -552,6 +501,8 @@ aside article, aside section:not(.parent-container){
 	}
 
 	aside{
+		position: relative;
+		top: 40px;
 		float: left;
 		width: 40%;
 	}
