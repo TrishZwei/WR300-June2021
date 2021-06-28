@@ -336,10 +336,42 @@ input:focus, select:focus, textarea:focus{
 }
 
 /*change the look of required fields*/
-
 input:required{
-	/*content: "*";*/
-	color: red;
+	border: 2px solid #666;
+	background-color: rgba(245,190,154,0.5);
+}
+/*
+
+depending on the type of input, before and after 
+pseudo elements do not work. 
+
+This is also the case on images. 
+
+see:  ;https://webplatform.news/issues/2020-08-26
+
+The article above mentions that it depends on if the element 
+is a "replaced" element find below a list of potentially 
+"replaced" elements
+
+https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements
+
+*/
+
+/*styles for JS errors*/
+
+input[type="text"], textarea{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+
+input[type="text"]:focus, textarea:focus{
+	box-shadow: 0 0 5px rgba(245,190,154,0.8);
+	border: 1px solid rgba(245,190,154,0.8);
+	margin: 5px 1px 3px 0;
+	padding: 3px 0 3px 3px;
 }
 
 
