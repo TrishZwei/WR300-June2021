@@ -268,6 +268,84 @@ div.map{
 }
 
 /*form styles*/
+form{
+	padding: 1em;
+	margin: 0 0 2em;
+	width: 100%;
+	border: none;
+	position: relative;
+	border-radius: 1em;
+}
+
+fieldset{
+	width: 100%;
+	border: 2px solid #A45018;
+	margin-bottom:1.3em;
+	padding: .5em;
+}
+
+input, textarea{
+	border-radius: .5em;
+	font-family: inherit;
+	width: 90%;
+}
+
+
+input[type="submit"]{
+	cursor: pointer;
+	width: 6em;
+	height: 3em;
+	margin-left: 1em;
+	background-color: rgba(245, 190, 154, .8);
+}
+
+input[type="submit"]:hover{
+	background-color: #a45018;
+	color: white;
+	appearance: normal;
+}
+
+label{
+	display: inline-block;
+	padding: .5em .3em;
+	font-variant: small-caps;
+	color: #BE815A;
+}
+
+select{
+	min-width: 170px;
+	padding: 1em;
+	border-radius: .5em;
+}
+
+legend{
+	font-size: 1.2em;
+	color: #903;
+	padding: .3em;
+}
+
+input:focus, select:focus, textarea:focus{
+	outline: none;
+	background-color: burlywood;
+
+}
+
+::placeholder{
+	color: #444;
+	font-style: italic;
+}
+
+/*change the look of required fields*/
+
+input:required{
+	/*content: "*";*/
+	color: red;
+}
+
+
+.no-js #how-much{
+	display: none;
+}
 
 
 aside{

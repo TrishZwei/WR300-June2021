@@ -166,6 +166,16 @@ cups.change( function(){
 
 });
 
+/* validate documentation:
+https://jqueryvalidation.org/validate/
+https://jqueryvalidation.org/valid/
+https://jqueryvalidation.org/rules/
+Rules documentation does not look like the example below...
+but this page: https://jqueryvalidation.org/category/methods/ has it.
+
+
+*/
+
 //validate function
 $('#signup').validate({
 //start of arguments for the validate function
@@ -217,7 +227,8 @@ onfocusout:function(element){
 		if(element.is(':checkbox')){
 			error.appendTo(element.parents('fieldset'));
 		}else{
-			error.insertAfter(element);
+			error.insertAfter(element); 
+			//because the error placement function overwrites what already exists, we have to add the default behavior in the else clause.
 		}
 	} //end errorPlacement
 }); //end of validate

@@ -34,10 +34,60 @@
 </header>
 <main>
 <section>
-<!-- 
-form elements go here:
--->
-<p>The form will go here.</p>
+	<form method="get" action="#" id="sign-up">
+		<fieldset>
+			<legend>Basic Info</legend>
+<!-- 		<label for="full-name">Name:</label>
+			<input type="text" name="name" id="full-name"> -->
+			<label>Name: <input type="text" name="name" placeholder="your full name" required></label>
+			<label>Age: <input type="number" name="age" min="10" placeholder="28" required></label>
+			<label>Gender:
+				<select name="gender" required>
+					<option value="">Please Choose</option>	
+					<option value="male">Male</option>	
+					<option value="female">Female</option>	
+					<option value="other">Choose not to Answer</option>	
+				</select>
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Daily Coffee Consumption</legend>
+			<label>In Cups: 0 - 10+
+				<input type="range" name="cups" min="0" max="11" step="1">
+				<!-- the how much wil be hidden with no-js -->
+				<span id="how-much">You have selected: 5 cups</span>
+				<p>Enter 0 if you don't drink coffee every day.</p>
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Work Status:</legend>
+			<label><input type="radio" name="work" value="student">Student</label>			
+			<label><input type="radio" name="work" value="employed">Employed</label>
+			<label><input type="radio" name="work" value="unemployed">Unemployed/Retired</label>
+			<label><input type="radio" name="work" value="other">Other</label>
+		</fieldset>
+		<fieldset>
+			<legend>Time of Day</legend>
+			<p>When do you enjoy your coffee? Please check all that apply</p>
+			<label><input type="checkbox" name="coffee[]" value="morning">Morning</label>
+			<label><input type="checkbox" name="coffee[]" value="afternoon">Afternoon</label>
+			<label><input type="checkbox" name="coffee[]" value="evening">Evening</label>
+			<label><input type="checkbox" name="coffee[]" value="night">Night</label>
+		</fieldset>
+		<fieldset>
+			<legend>Treats</legend>
+			<p>What kinds of things do you like to have with your coffee?</p>
+			<textarea placeholder="cheesecake, pastries, cookies, etc."></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Sign Up for Newsletter</legend>
+			<p>We promise not to spam your box or sell your email to a third party.</p>
+			<label>Email: <input type="email" name="email" placeholder="You@example.com"></label>
+			<label><input type="checkbox" name="agree">I agree to the terms of service.</label>
+		</fieldset>
+		<input type="hidden" name="did_submit" value="true">
+		<input type="submit" value="Sign Up">
+	</form>
 </section>
 </main>
 <aside class="cf">
@@ -82,10 +132,6 @@ form elements go here:
 
 <script type="text/javascript">
 	document.querySelector('html').classList = 'js';
-
-
-
-
 </script>
 
 </body>
