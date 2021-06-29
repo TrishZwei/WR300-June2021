@@ -347,7 +347,7 @@ pseudo elements do not work.
 
 This is also the case on images. 
 
-see:  ;https://webplatform.news/issues/2020-08-26
+see:  https://webplatform.news/issues/2020-08-26
 
 The article above mentions that it depends on if the element 
 is a "replaced" element find below a list of potentially 
@@ -358,6 +358,14 @@ https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements
 */
 
 /*styles for JS errors*/
+
+.error{
+	color: red;
+	font-weight: bold;
+	font-variant: normal;
+}
+
+
 
 input[type="text"], textarea{
 	-webkit-transition: all 0.30s ease-in-out;

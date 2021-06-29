@@ -39,8 +39,8 @@
 			<legend>Basic Info</legend>
 <!-- 		<label for="full-name">Name:</label>
 			<input type="text" name="name" id="full-name"> -->
-			<label>Name: <input type="text" name="name" placeholder="your full name" required></label>
-			<label>Age: <input type="number" name="age" min="10" placeholder="28" required></label>
+			<label>Name: <input type="text" name="name" placeholder="your full name" required title="You need to enter your name."></label>
+			<label>Age: <input type="number" name="age" min="10" placeholder="28" required title="hi"></label>
 			<label>Gender:
 				<select name="gender" required>
 					<option value="">Please Choose</option>	
@@ -53,7 +53,7 @@
 		<fieldset>
 			<legend>Daily Coffee Consumption</legend>
 			<label>In Cups: 0 - 10+
-				<input type="range" name="cups" min="0" max="11" step="1">
+				<input type="range" name="cups" min="0" max="11" step="1" value="5">
 				<!-- the how much wil be hidden with no-js -->
 				<span id="how-much">You have selected: 5 cups</span>
 				<p>Enter 0 if you don't drink coffee every day.</p>
@@ -77,13 +77,13 @@
 		<fieldset>
 			<legend>Treats</legend>
 			<p>What kinds of things do you like to have with your coffee?</p>
-			<textarea placeholder="cheesecake, pastries, cookies, etc."></textarea>
+			<textarea placeholder="cheesecake, pastries, cookies, etc." name="treats"></textarea>
 		</fieldset>
 		<fieldset>
 			<legend>Sign Up for Newsletter</legend>
 			<p>We promise not to spam your box or sell your email to a third party.</p>
-			<label>Email: <input type="email" name="email" placeholder="You@example.com"></label>
-			<label><input type="checkbox" name="agree">I agree to the terms of service.</label>
+			<label>Email: <input type="email" name="email" placeholder="You@example.com" required></label>
+			<label><input type="checkbox" name="agree" required>I agree to the terms of service.</label>
 		</fieldset>
 		<input type="hidden" name="did_submit" value="true">
 		<input type="submit" value="Sign Up">
@@ -129,9 +129,98 @@
 	<small>&copy; 2017 We Love Coffee</small>	
 </footer>
 <!-- javascript functions that need to be called after page is loaded and DOM is ready -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script type="text/javascript">
+	'use strict';
+
+	//vanilla JS
 	document.querySelector('html').classList = 'js';
+
+	//jQuery:
+	var cups = $('input[type=range]'); //only one on page, which has our cups value.
+
+	cups.change( function(){
+		var cupsVal = cups.val();
+		//alert(cupsVal);
+		var message = '';
+
+
+		if(cupsVal > 10){
+			message = 'Are you insane?';
+		}else if(cupsVal == 0){
+			message = 'How do you get up in the morning?';
+		}else{
+			message = 'You have selected '+cupsVal+' cups.';
+		}
+
+		$('#how-much').text(message);
+
+	})
+
+//jquery validate
+	// $('#sign-up').validate(); //default behavior
+
+	$('#sign-up').validate({
+		//start of arguments for the validate function
+		onfocusout:function(element){
+			$(element).valid();
+		}, //end of first argument
+		rules:{
+			//name, age and gender come from the name field of the element
+			name: 'required',
+			age: 'required',
+			gender: 'required',
+			/* 
+			because groups of checkboxes cannot be validated by HTML5 validation -- and if we put required attribute on a specific checkbox, that checkbox has to be checked
+			*/
+			'coffee[]':{
+				required:true,
+				minlength:1
+			},
+			email:{
+				required: true,
+				email: true
+			}
+			//any more rules to add? they go here
+
+		}, //end of rules
+		messages:{
+			//these are custom messages they will overwrite any messages placed in the title tag.
+			age:{
+				required: 'Please tell me how old you are.'
+			},
+			gender:{
+				required: 'Please make a choice so I know you did not miss this box.'
+			},
+			'coffee[]':{
+				required: 'You must choose at least one time of day.'
+			},
+			email:{
+				required: 'Your email is required so we can send you these great deals straight to your inbox.',
+				email: 'This is not a valid email address.'
+			},
+			agree:{
+				required: 'We need to know that you agree to the terms of service.'
+			}
+
+		}, //end of messages
+		//error placement allows us to put error messages in specific locations (ex: the checkbox errrors)
+			errorPlacement: function(error, element){
+				if(element.is(':checkbox')){
+					error.appendTo(element.parents('fieldset'));
+				}else{
+					error.insertAfter(element);
+				}
+
+
+			} //end of errorPlacement
+
+	}); //end of validate
+
+
+
 </script>
 
 </body>
