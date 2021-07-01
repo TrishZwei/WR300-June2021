@@ -121,9 +121,9 @@ if($valid ){
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?php echo "Mail $body_class" ?></title>
+	<title><?php echo "Mail $body_class"; ?></title>
 </head>
-<body class="<?php echo $body_class ?>">
-<p><?php echo $message ?></p>
+<body class="<?php echo $body_class; ?>">
+<p><?php echo $message; ?></p>
 </body>
 </html>
