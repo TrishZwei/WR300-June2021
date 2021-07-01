@@ -34,7 +34,8 @@
 </header>
 <main>
 <section>
-	<form method="get" action="#" id="sign-up">
+
+<form method="post" action="processing.php" id="sign-up">
 		<fieldset>
 			<legend>Basic Info</legend>
 <!-- 		<label for="full-name">Name:</label>
@@ -162,6 +163,7 @@
 //jquery validate
 	// $('#sign-up').validate(); //default behavior
 
+/*TODO: remove multiline comment
 	$('#sign-up').validate({
 		//start of arguments for the validate function
 		onfocusout:function(element){
@@ -172,9 +174,9 @@
 			name: 'required',
 			age: 'required',
 			gender: 'required',
-			/* 
-			because groups of checkboxes cannot be validated by HTML5 validation -- and if we put required attribute on a specific checkbox, that checkbox has to be checked
-			*/
+			 
+			//because groups of checkboxes cannot be validated by HTML5 validation -- and if we put required attribute on a specific checkbox, that checkbox has to be checked
+			
 			'coffee[]':{
 				required:true,
 				minlength:1
@@ -218,7 +220,11 @@
 			} //end of errorPlacement
 
 	}); //end of validate
+*/
 
+//TODO: remove after testing:
+$(':required').removeAttr('required'); 
+//quick way to remove the required attributes for testing purposes
 
 
 </script>

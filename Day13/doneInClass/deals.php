@@ -1,4 +1,5 @@
 <?php  
+//php file self parsing. Sends data to itself.
 	include('parse.php');
 ?>
 <!DOCTYPE html>
@@ -38,6 +39,8 @@
 <main>
 <section>
 	<form method="post" action="#" id="sign-up">
+<!-- 	<form method="post" action="processing.php" id="sign-up"> -->
+
 		<fieldset>
 			<legend>Basic Info</legend>
 <!-- 		<label for="full-name">Name:</label>
