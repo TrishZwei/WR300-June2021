@@ -76,9 +76,36 @@ if( ! filter_var($email, FILTER_VALIDATE_EMAIL)){
 var_dump($errors);
 
 
-
 if($valid ){
-	echo '$valid is true'; 
+//	echo '$valid is true'; 
+//if valid is true, then we want to gather up and format the data to be sent to our email.
+
+	$to = 'tladd@platt.edu';
+	$subject = 'Newsletter Sign Up';
+//'single quotes are literal'
+
+	$body = "Name: $name \n";
+	$body .= "Age: $age \n";
+	$body .= "Gender: $gender \n";
+	$body .= "Cups/Day: $cups \n";
+	$body .= "Work: $work \n";
+	$body .= "Time of Day: $coffee_time \n";
+	$body .= "Treats: $treats \n";
+	$body .= "Email: $email \n";
+
+	$headers = "From: tladd@platt.edu \r\n";
+	//$headers .= "Reply-To: $email \r\n";
+	//$headers .= "Content-Type: text/plain \r\n";
+
+	//uncomment this in for live server: 
+	$mail = mail($to, $subject, $body, $headers); 
+	echo $mail;
+
+// comment this on live server
+	// echo $to;
+	// echo $subject;
+	// echo $body;
+	// echo $headers;
 
 }
 

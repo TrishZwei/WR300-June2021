@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Joe's Question</title>
+	<style type="text/css">
+		body{
+			font-family: Verdana;
+			display: grid;
+			grid-template-rows: 5em auto auto;
+			grid-template-columns: 2fr 1fr;
+			grid-template-areas: "header header" "main aside" "footer footer";
+		}	
+
+		header{
+			grid-area: header;
+		}
+
+		main{
+			grid-area:  main;
+		}
+
+		aside{
+			grid-area:  aside;
+		}
+
+	footer{
+			grid-area: footer;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Joe's Question</h1>
+	<nav>
+		<a href="#">one</a> <a href="#">two</a> <a href="#">three</a>
+	</nav>
+	</header>
+	<main>
+		<h2>Title of main</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</main>
+	<aside>
+		<h2>Title of Aside</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</aside>
+	<footer>
+		<h3>Title of footer</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+		<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+		<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+		<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</footer>
+
+</body>
+</html>
