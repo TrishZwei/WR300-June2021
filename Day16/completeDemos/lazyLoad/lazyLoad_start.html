@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Testing Lazy Loading</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h2>Lazy Loading</h2>
+    <small>code from <a href="https://www.robinosborne.co.uk/2016/05/16/lazy-loading-images-dont-rely-on-javascript/" target="_blank">Robin Osborne</a></small>
+  </header>
+  <main>
+    <section>
+      <h3>What is Lazy Loading?</h3>
+      <p>So much of the internet is now made up of pages containing loads of images; just visit your favourite shopping site and scroll through a product listing page for an example of this.</p>
+
+      <p>As you can probably imagine, bringing in all of these images when the page loads can add unnecessary bloat, causing the user to download lots of data they may not see. It can also make the page slow to interact with, due to the page layout constantly changing as new images load in, causing the browser to reprocess the page.</p>
+
+      <p>One popular method to deal with this is to “Lazy Load” the images; that is, to only load the images just before the user will need to see them. If this technique is applied to the “above the fold” content – i.e., the first average viewport-sized section of the page – then the user can get a significantly faster first view experience.
+      </p>
+    </section>
+
+    <section>
+      <h3>Progressively Enhanced Lazy Loading Images</h3>
+      <p>Given the potential limitations, let’s work on a solution that can handle all my concerns:</p>
+        <ol>
+          <li>works without JavaScript (i.e., lazy loading is an enhancement)</li>
+          <li>vanilla js – no dependencies on jquery or angularjs </li>
+          <li>works with broken JavaScript (i.e., the browser supports JavaScript, but there’s a js error somewhere which causes your script to break; might not even be your fault!)</li>
+        </ol>
+    </section>
+    <section id="images">
+      <h3>Let's try it</h3>
+      <div class="mypic">
+        <img src="images/image1.jpg" alt="cool image 1">
+        <small>caption 1</small>
+      </div>
+
+       <div class="mypic">
+        <img src="images/image2.jpg" alt="cool image 2">
+        <small>caption 2</small>
+      </div>
+
+       <div class="mypic">
+        <img src="images/image3.jpg" alt="cool image 3">
+        <small>caption 3</small>
+      </div>
+
+       <div class="mypic">
+        <img src="images/image4.jpg" alt="cool image 4">
+        <small>caption 4</small>
+      </div>
+
+      <!-- everything after this point will be a lazy load -->
+     
+      <!-- fallback if js is not available -->
+      <noscript id="viewMore">
+        <div>
+          <a href="gallery.html">view more images</a>
+        </div>
+          </noscript>
+       <!--  -->
+
+       <div id="nextPage" class="hidden">
+
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 5" data-src="images/image5.jpg">
+          <small>caption 5</small>
+        </div>
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 6" data-src="images/image6.jpg">
+          <small>caption 6</small>
+        </div>
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 7" data-src="images/image7.jpg">
+          <small>caption 7</small>
+        </div>
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 8" data-src="images/image8.jpg">
+          <small>caption 8</small>
+        </div>
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 9" data-src="images/image9.jpg">
+          <small>caption 9</small>
+        </div>
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 10" data-src="images/image10.jpg">
+          <small>caption 10</small>
+        </div>
+        <div class="mypic">
+          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 11" data-src="images/image11.jpg">
+          <small>caption 11</small>
+        </div>
+         
+       </div> <!-- closes .hidden -->
+    </section><!--  closes #images -->
+  </main>
+
+<script>
+//create an array
+var lazy = [];
+
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+registerListener('scroll', lazyLoad);
+registerListener('resize', lazyLoad);
+
+function setLazy(){
+  document.getElementById('images').removeChild(document.getElementById('viewMore'));
+  document.getElementById('nextPage').removeAttribute('class');
+// fill the array with anything with the class lazy
+  lazy = document.getElementsByClassName('lazy');
+//for testing: shows how any images were inside lazy
+  console.log('Found ' + lazy.length + ' lazy images');
+}
+
+function lazyLoad(){
+  for(var i=0; i<lazy.length; i++){
+    if(isInViewport(lazy[i])){
+      //if the item in the array has the attribute data-src
+      if (lazy[i].getAttribute('data-src')){
+        //replace the value of src with the value of data-src
+        lazy[i].src = lazy[i].getAttribute('data-src');
+        //remove the data-src attribute
+        lazy[i].removeAttribute('data-src');
+      }//closes inner if
+    }//closes outer if
+  }//closes for loop
+}//closes lazyload
+
+function cleanLazy(){
+  lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+}
+cleanLazy();
+
+function isInViewport(el){
+  //create a virtual rectangle with is the same size as the viewport
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.bottom >= 0 &&
+    rect.right >= 0 &&
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function registerListener(event, func) {
+  if (window.addEventListener) {
+    window.addEventListener(event, func)
+  } else {
+    window.attachEvent('on' + event, func)
+  }
+}
+</script>
+</body>
+</html>

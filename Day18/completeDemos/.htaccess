@@ -1,0 +1,3 @@
+#the long URL is because this example is in a subdirectory. If the htaccess file is in your root, /bad-url.html should work.
+ErrorDocument 404 http://localhost/trish/rwd-class/061521-WR300/WR300-June2021/Day18/completeDemos/bad-url.html
+#https://developer.mozilla.org/en-US/docs/Web/HTTP/Status

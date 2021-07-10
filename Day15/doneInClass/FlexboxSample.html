@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sample of flexbox used for layouts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<h2> display:flex Layout</h2>
+		<nav>
+		<!-- added this class to target this container -->
+			<ul class="flexcontainer">
+		      <li><a href="home">Home</a></li>
+		      <li><a href="about">About</a></li>
+		      <li><a href="news">Latest News</a></li>
+		      <li><a href="meals">Kitten Meals</a></li>
+		      <li><a href="pelts">kitten Pelts</a></li>
+		      <li><a href="dioramas">kitten Dioramas</a></li>
+		      <li><a href="search">Search</a></li>
+		    </ul>
+		</nav>
+	</header>
+	<!-- added this container div to surround main and aside -->
+	<div id="container">
+	<main>
+		<section>
+			<h2>Flexbox In the Real World</h2>
+			<h4>Found on: <a href="http://www.planningforaliens.com/blog/2014/03/11/real-world-flexbox/">PlanningForAliens.com</a></h4>
+			<img src="http://placekitten.com/g/165/170">
+			<p class="intro">Flexbox is awesome, but is it possible to use flexbox and still support IE8? If you follow these guidelines, you can start using flexbox today.</p>
+			<p>I’ve been writing about and teaching flexbox for awhile now, and the most common question people ask is, “When will support be good enough for me to use flexbox in a real project?”</p>
+			<p>I’ve always thought flexbox has a place in rapid prototyping. But I also think that with a little planning, many of us could be using flexbox in production today.
+			</p>	
+			<p>In this article, we will explore options for when flexbox can be used in production, starting with the best case scenario and working our way down to IE8. <a href="http://www.planningforaliens.com/blog/2014/03/11/real-world-flexbox/">...read more</a>
+			</p>
+		</section>
+		<section>
+			<form>
+				  <fieldset class="customer">
+				      <legend>Your Details</legend>
+				      <label for="name">Full Name Name:</label><input type="text" name="name" value="" />
+				      <label for="name">Address:</label><input type="text" name="name" value="" />
+				      <label for="name">Email:</label><input type="text" name="name" value="" />
+				    </fieldset>
+				    <fieldset class="order">
+				      <legend>Your Order</legend>
+				      <ul>
+				        <li><input type="checkbox" name="basket" id="item1" value="1" /> <label for="item1">Large kitten roast x 1</label></li>
+				        <li><input type="checkbox" name="basket" id="item2" value="2" /> <label for="item2">kitten meatballs x 12</label></li>
+				        <li><input type="checkbox" name="basket" id="item3" value="3" /> <label for="item3">kitten jerky x 3</label></li>
+				        <li><input type="checkbox" name="basket" id="item3" value="3" /> <label for="item3">kitten diorama x 1</label></li>
+				      </ul>
+				    </fieldset>
+			</form>
+		</section>
+	</main>
+
+	<aside>
+		<h3>Flexbox features</h3>
+		<ul>
+			<li>An alternate way to layout pages</li>
+			<li>works with dynamic elements</li>
+			<li>containers can alter their heights and widths</li>
+			<li>elements can have their flow order switched</li>
+		</ul>
+	<!-- added this id to target this container -->
+		<ul id="products">
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+	      <li class="product"><img src="http://placehold.it/400x300"><p>caption</p></li>
+    </ul>
+</aside>
+</div>
+	<footer>
+		<article>
+			<h4>footer widget</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+		</article>
+		<article>
+			<h4>footer widget</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article>
+			<h4>footer widget</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+		</article>
+		
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<title>Sample of inline block used for layouts</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/inline-styles.css">
+</head>
+<body>
+	<header>
+		<h2> Inline-Block Layout</h2>
+		<nav>
+			<ul>
+		      <li><a href="home">Home</a></li><!--
+		   --><li><a href="about">About</a></li><li>
+		          <a href="news">Latest News</a></li>
+		      <li><a href="meals">Kitten Meals</a></li>
+		      <li><a href="pelts">kitten Pelts</a></li>
+		      <li><a href="dioramas">kitten Dioramas</a></li>
+		      <li><a href="search">Search</a></li>
+		    </ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Inline Block goodness</h2>
+			<img src="http://placekitten.com/g/165/170">
+			<p>Inline-block is a value for the display property that lets you consistently apply properties like margins, padding, width, height, and vertical-align while remaining an inline element. It’s incredibly useful in any situation where you want to align block elements horizontally in rows.</p>
+			<p>A mainstay of blogs everywhere is the use of an unordered list for the navigation menu. Turning that list horizontal would normally require you to float all the menu items left or right, then deal with the height of the containing element, and any clearing problems. All of these problems are nullified by applying display: inline-block; to all the li elements. If you want to make the anchor elements fill up the space, apply display: block; to them.</p>	
+		</section>
+		<section>
+			<form>
+				  <fieldset class="customer">
+				      <legend>Your Details</legend>
+				      <label for="name">Full Name Name:</label><input type="text" name="name" value="" />
+				      <label for="name">Address:</label><input type="text" name="name" value="" />
+				      <label for="name">Email:</label><input type="text" name="name" value="" />
+				    </fieldset>
+				    <fieldset class="order">
+				      <legend>Your Order</legend>
+				      <ul>
+				        <li><input type="checkbox" name="basket" id="item1" value="1" /> <label for="item1">Large kitten roast x 1</label></li>
+				        <li><input type="checkbox" name="basket" id="item2" value="2" /> <label for="item2">kitten meatballs x 12</label></li>
+				        <li><input type="checkbox" name="basket" id="item3" value="3" /> <label for="item3">kitten jerky x 3</label></li>
+				        <li><input type="checkbox" name="basket" id="item3" value="3" /> <label for="item3">kitten diorama x 1</label></li>
+				      </ul>
+				    </fieldset>
+			</form>
+		</section>
+	</main><!--
+	--><aside>
+		<h3>Inline-block features</h3>
+		<ul>
+			<li>inline-block renders the white space in your html, because it treats the elements as characters</li>
+			<li>support is excellent: IE8+ supports it</li>
+			<li>it is easy to align elements vertically among each others: use text-align on the parent element</li>
+		</ul>
+		<ul>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+	      <li class="product"><img src="http://placekitten.com/g/500/300"><p>caption</p></li>
+    </ul>
+
+	</aside>
+	<footer>
+		<article>
+			<h4>footer widget</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+		</article>
+		<article>
+			<h4>footer widget</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+		</article>
+		<article>
+			<h4>footer widget</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. </p>
+		</article>
+		
+	</footer>
+
+</body>
+</html>

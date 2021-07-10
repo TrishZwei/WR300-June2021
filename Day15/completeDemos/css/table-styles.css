@@ -1,0 +1,155 @@
+/*apply natural box model*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+/* For modern browsers */
+.cf:before, .cf:after {
+	content:"";
+	display:table;
+}
+
+.cf:after {
+	clear:both;
+}
+
+.cf {
+	zoom:1;
+}
+body {
+  font-family: sans-serif;
+	background-color: #F9F6DE;
+
+}
+header, footer{
+	background-color: #5F9838;
+	margin;0;
+	padding:1em;
+	color:white;
+}
+header h2{
+	color:white;
+	font-weight: bold;
+	font-size: 2em;
+}
+nav ul{
+	width:100%;
+	padding:0;
+	list-style: none;
+}
+
+nav ul li{
+	background-color:#066820;
+	border-bottom: 1px solid white;
+}
+nav ul li:last-child{
+	border-bottom:none;
+}
+nav ul a{
+	display:block;
+	color:white;
+	text-decoration: none;
+	padding:1em;
+	
+}
+
+nav ul a:hover{
+	color:#3A0707;
+}
+main{
+	padding:1em;
+	background-color: white;
+	margin:0;
+	
+}
+aside{
+	padding:1em;
+	background-color:white;
+}
+
+img{
+	max-width:100%;
+}
+main img{
+	float:left;
+	width:40%;
+	padding:0 2em 1em 0;
+}
+main, aside, footer{
+	line-height: 1.3em;
+	font-size: 0.9em;
+}
+form{
+	clear:both;
+	display:block;
+}
+
+form fieldset{
+	border: 1px solid #066820;
+  	padding: 0.5em;
+  	margin-top:1em;
+}
+
+
+form ul{
+	list-style: none;
+}
+aside ul:nth-of-type(2){
+	padding:0;
+	list-style: none;
+}
+
+
+/* ++++++++++++++++++++++++++ media queries +++++++++++++++++++++++++++ */
+@media only screen and (min-width:783px){
+	nav{
+		text-align: center;
+	}
+
+	form{
+		clear:both;
+		display:block;
+	}
+
+nav ul{
+	display: table;
+}
+
+nav ul li{
+	display: table-cell;
+	border-bottom: none;
+}
+
+main, aside{
+	display: table-cell;
+	vertical-align: top;
+}
+
+main{
+	width: 65%;
+	background-color: silver;
+}
+
+li.product{
+	list-style: none;
+	display: table-row;
+}
+
+footer article{
+	display: table-cell;
+	width: 33%;
+	padding: .5em;
+}
+
+
+
+}
+
+@media only screen and (min-width:880px){
+
+	body{
+		max-width: 1300px;
+		margin:0 auto;
+	}
+	
+
+	
+}
