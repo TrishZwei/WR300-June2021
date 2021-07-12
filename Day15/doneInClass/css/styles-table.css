@@ -116,33 +116,40 @@ aside ul:nth-of-type(2){
 		display:block;
 	}
 
-	fieldset{
-		width: 45%;
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.customer{
-		margin-right: 5%;
-		margin-left: 2%;
-	}
-
-	.product{
-		display: inline-block;
-		width: 49%;
-	}
-
-
 }
 
 
-
-
 @media only screen and (min-width:783px){
+	nav ul{
+		display: table;
+	}
 	nav ul li {
-		display: inline-block;
+		display: table-cell;
 		border-bottom: none;
 	}
+
+	main, aside{
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	main{
+		width: 65%;
+		background-color: silver;
+	}
+
+
+.product{
+	list-style: none;
+	display: table-row;
+}
+
+footer article{
+	display: table-cell;
+	width: 33%;
+	padding: .5em;
+}
+
 }
 
 
