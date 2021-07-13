@@ -66,105 +66,36 @@
        <div id="nextPage" class="hidden">
 
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 5" data-src="images/image5.jpg">
+          <img class="lazy" src="images/image5.jpg" alt="lazy image 5" data-src="images/image5.jpg">
           <small>caption 5</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 6" data-src="images/image6.jpg">
+          <img class="lazy" src="images/image6.jpg" alt="lazy image 6" data-src="images/image6.jpg">
           <small>caption 6</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 7" data-src="images/image7.jpg">
+          <img class="lazy" src="images/image7.jpg" alt="lazy image 7" data-src="images/image7.jpg">
           <small>caption 7</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 8" data-src="images/image8.jpg">
+          <img class="lazy" src="images/image8.jpg" alt="lazy image 8" data-src="images/image8.jpg">
           <small>caption 8</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 9" data-src="images/image9.jpg">
+          <img class="lazy" src="" alt="lazy image 9" data-src="images/image9.jpg">
           <small>caption 9</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 10" data-src="images/image10.jpg">
+          <img class="lazy" src="images/image10.jpg" alt="lazy image 10" data-src="images/image10.jpg">
           <small>caption 10</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 11" data-src="images/image11.jpg">
+          <img class="lazy" src="images/image11.jpg" alt="lazy image 11" data-src="">
           <small>caption 11</small>
         </div>
          
        </div> <!-- closes .hidden -->
     </section><!--  closes #images -->
   </main>
-<script>
-document.querySelector('html').classList = 'js';
-
-let lazy = [];
-
-
-
-function setLazy(){
-  lazy = document.querySelectorAll('.lazy');
-  //lazySpan = document.getElementsByClassName('pictitle');
-  console.log('found: '+ lazy.length +' images')
-
-}
-setLazy()
-
-//lazy load images
-function lazyLoad(){
-  for(let i=0; i < lazy.length; i++){
-    if(isInViewport(lazy[i])){
-      //isInViewport is a function that we will write below
-        if(lazy[i].getAttribute('data-src')){
-          //data-src has the path to where the image resides
-          lazy[i].src = lazy[i].getAttribute('data-src')
-          //remove attr?
-        }//close if lazy[i].getAttribute
-
-    } //close if isInViewport
-
-  }//close for loop
-
-} //close lazyLoad function
-
-function isInViewport(el){
-  //@param is the element passed to the function
-  //this function checks to see if the element is in the viewport
-
-  let rect = el.getBoundingClientRect(); 
-  return (
-        rect.bottom >= 0 &&
-        rect.right >= 0 && 
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-    )
-
-}
-
-//register listeners
-
-function registerListener(event, func){
-  if(window.addEventListener){
-    window.addEventListener(event, func)
-  }else{
-    window.attachEvent('on' + event, func)
-  }
-
-}
-
-registerListener('load', setLazy);
-registerListener('load', lazyLoad);
-registerListener('scroll', lazyLoad);
-registerListener('resize', lazyLoad);
-
-
-
-
-
-
-
-</script>
 </body>
 </html>

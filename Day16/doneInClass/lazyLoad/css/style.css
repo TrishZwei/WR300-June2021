@@ -46,7 +46,7 @@ img{
   padding:0.35em 0 1.5em 0;
 }
 
-.hidden{
+.no-js .hidden{
   display:none;
 }
 

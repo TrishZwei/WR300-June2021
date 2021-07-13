@@ -5,6 +5,16 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="scripts/modernizr.custom.js"></script>
+	<style type="text/css">
+		.test {
+  			shape-outside: polygon(0 0, 0 200px, 300px 600px);
+  			width: 300px;
+  			height: 500px;
+  			float: left;
+  			opacity: .2;
+			}
+
+	</style>
 </head>
 <body>
 	<header>
@@ -111,5 +121,22 @@
 
 	</main>
 
+	<div>
+<svg height="210" width="500">
+  <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<div class="test"></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+
+	</div>
 </body>
 </html>

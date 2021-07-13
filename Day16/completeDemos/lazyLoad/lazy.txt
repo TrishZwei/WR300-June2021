@@ -1,4 +1,4 @@
-<script>
+
   var lazy = [];
   var lazySpan=[];
 
@@ -11,6 +11,7 @@ function setLazy(){
 //for debugging it shows how many items ar in both arrays
     console.log('Found ' + lazy.length + ' lazy images' + 'and ' + lazySpan.length + 'spans');
   }
+
   //lazy load images
   function lazyLoad(){
     for(var i=0; i<lazy.length; i++){
@@ -22,6 +23,7 @@ function setLazy(){
       }//closes outer if
     }//closes for loop
   }//closes lazyload
+
   function cleanLazy(){
     lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
   }
@@ -36,6 +38,8 @@ function setLazy(){
       rect.left <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
+
+  
   function registerListener(event, func) {
     if (window.addEventListener) {
       window.addEventListener(event, func)
@@ -49,4 +53,3 @@ function setLazy(){
   registerListener('scroll', lazyLoad);
   registerListener('resize', lazyLoad);
 
-  </script>
