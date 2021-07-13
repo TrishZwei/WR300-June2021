@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page Piling</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css" integrity="sha512-W9OWS8dgpQBw5Hb+tbMto1BMsHvYOXT/AFBGvASCPUJleaEdpOAN5lzgj9RrTbo3YrlR+m9xdOBccp8F+SFyQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style type="text/css">
+    /* Style for our header texts
+  * --------------------------------------- */
+  h1{
+    font-size: 5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+    padding:0;
+  }
+
+  /* Centered texts in each section
+  * --------------------------------------- */
+  .section{
+    text-align:center;
+  }
+
+
+  /* Backgrounds will cover all the section
+  * --------------------------------------- */
+  #section1,
+  #section2,
+  #section3,
+  #section4{
+    background-size: cover;
+  }
+
+  /* Defining each section background and styles
+  * --------------------------------------- */
+  #section2, #section4, #section3{
+    padding: 6% 0 0 0;
+  }
+ 
+  #section3 h1{
+    color: #000;
+  }
+
+  #section1 h1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30px;
+    color: #fff;
+  }
+
+  #section2 .intro{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30px;
+  }
+  #section2 h1,
+  #section2 p{
+    text-shadow: 1px 5px 20px #000;
+  }
+
+  #section3 h1,
+  #section3 p{
+    text-shadow: 1px 5px 20px #000;
+    color: #fff;
+  }
+
+  #infoMenu li a{
+      color: #fff;
+  }
+    </style>
+
+</head>
+<body>
+<h1 class="mt-12 mb-8 px-6 text-center text-lg md:text-2xl font-semibold">
+  Page Piling
+</h1>
+<ul id="menu">
+    <li data-menuanchor="section1" class="active"><a href="#section1">Section 1</a></li>
+    <li data-menuanchor="section2"><a href="#section2">Section 2</a></li>
+    <li data-menuanchor="section3"><a href="#section3">Section 3</a></li>
+    <li data-menuanchor="section4"><a href="#section4">Section 4</a></li>
+  </ul>
+
+<div id="pagepiling">
+  <div class="section" id="section1">
+    <h2>Section One: Developer Ipsum</h2>
+    <p>Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter. (Eric Raymond) There are two major products that come out of Berkeley: LSD and UNIX. We don’t believe this to be a coincidence. (Jeremy S. Anderson) If debugging is the process of removing bugs, then programming must be the process of putting them in. (Edsger W. Dijkstra) Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are–by definition–not smart enough to debug it. (Brian Kernighan)</p>
+    <a href="https://developer-ipsum.netlify.app/">Developer Ipsum</a>
+  </div>
+  <div class="section" id="section2">
+    <h2>Section Two: Coffee Ipsum</h2>
+    <p>Body white aged roast, latte, siphon single origin, white filter ristretto in viennese, pumpkin spice, coffee spoon caramelization foam aged strong cream brewed wings at dripper. French press cup, galão saucer americano, eu iced decaffeinated shop sweet, milk roast organic, galão, caffeine irish redeye coffee chicory acerbic foam. Grinder, turkish instant, whipped lungo black milk eu ut, pumpkin spice ristretto, single origin froth variety cortado cup fair trade as, crema café au lait sit plunger pot arabica. So brewed, coffee cappuccino aroma, dark milk so, cinnamon, mazagran irish, id cappuccino, cultivar milk, spoon organic, ut crema est plunger pot affogato aroma. Coffee, wings rich so ut arabica crema galão redeye wings, macchiato whipped, frappuccino bar , extraction, barista cup, grinder shop americano to go arabica. French press seasonal, dark mocha, grinder mug aftertaste beans, robust shop to go bar  as sugar filter froth. Plunger pot shop pumpkin spice grounds barista foam coffee coffee so bar  java white acerbic foam, plunger pot variety sugar organic breve.</p>
+    <a href="http://coffeeipsum.com/">Coffee Ipsum</a>
+  </div>
+  <div class="section" id="section3">
+    <h2>Section Three: Cat Ipsum</h2>
+    <p>If it fits, i sits i’m so hungry i’m so hungry but ew not for that , and that box? i can fit in that box, for while happily ignoring when being called for sit on human. Scream at teh bath cough hairball on conveniently placed pants. Eat plants, meow, and throw up because i ate plants. Bleghbleghvomit my furball really tie the room together rub whiskers on bare skin act innocent. Sniff all the things mew mew, adventure always. Fall over dead (not really but gets sypathy) meow to be let in for mouse so making sure that fluff gets into the owner's eyes cough furball mess up all the toilet paper purr as loud as possible. </p>
+    <a href="http://www.catipsum.com/">Cat Ipsum</a>
+  </div>
+    <div class="section" id="section4">
+    <h2>Section Four: Zombie Ipsum</h2>
+    <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+    <a href="http://www.zombieipsum.com/">Zombie Ipsum</a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js" integrity="sha512-FcXc9c211aHVJEHxoj2fNFeT8+wUESf/4mUDIR7c31ccLF3Y6m+n+Wsoq4dp2sCnEEDVmjhuXX6TfYNJO6AG6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+//  $('#pagepiling').pagepiling({
+ //    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+ //});
+
+
+      /*
+      * Plugin intialization
+      */
+      $('#pagepiling').pagepiling({
+        menu: '#menu',
+        anchors: ['section1', 'section2', 'section3', 'section4'],
+        sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
+        navigation: {
+          'position': 'right',
+          'tooltips': ['Section 1', 'Section 2', 'Section 3', 'Section 4']
+        },
+        afterRender: function(){
+          $('#pp-nav').addClass('custom');
+        },
+        afterLoad: function(anchorLink, index){
+          if(index>1){
+            $('#pp-nav').removeClass('custom');
+          }else{
+            $('#pp-nav').addClass('custom');
+          }
+        }
+      });
+
+//works but is odd....
+
+//$('#pagepiling').pagepiling();  
+
+</script>
+</body>
+</html>

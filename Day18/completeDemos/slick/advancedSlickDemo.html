@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Slick Demo</title>
+	<!-- the problem in class was that the cdn stylesheets weren't the right ones. AND it needs both sheets -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+<style type="text/css">
+body{
+  background:#ccc;
+}
+.main {
+  font-family:Arial;
+  width:500px;
+  display:block;
+  margin:0 auto;
+}
+
+.action{
+  display:block;
+  margin:100px auto;
+  width:100%;
+  text-align:center;
+}
+.action a {
+  display:inline-block;
+  padding:5px 10px; 
+  background:#f30;
+  color:#fff;
+  text-decoration:none;
+}
+.action a:hover{
+  background:#000;
+}
+</style>
+
+</head>
+<body>
+<div class="main">
+  <div class="slider slide-container">
+	  <div><img src="images/1050-500x500.jpg"></div>
+	  <div><img src="images/1051-500x500.jpg"></div>
+	  <div><img src="images/1053-500x500.jpg"></div>
+	  <div><img src="images/1057-500x500.jpg"></div>
+  </div>
+  <div class="slider slider-nav">
+	  <div><img src="images/1050-150x150.jpg"></div>
+	  <div><img src="images/1051-150x150.jpg"></div>
+	  <div><img src="images/1053-150x150.jpg"></div>
+	  <div><img src="images/1057-150x150.jpg"></div>
+  </div>
+  <div class="action">
+    <a href="#" data-slide="1">go to slide 1</a>
+    <a href="#" data-slide="2">go to slide 2</a>
+    <a href="#" data-slide="3">go to slide 3</a>
+    <a href="#" data-slide="4">go to slide 4</a>
+
+  </div>
+
+</div>
+
+<!-- jquery! -->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<!-- any jQ Plugins go here -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+<script type="text/javascript">
+ $('.slide-container').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.slider-nav'
+ });
+
+ $('.slider-nav').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   asNavFor: '.slide-container',
+   dots: true,
+   focusOnSelect: true
+ });
+
+ $('a[data-slide]').click(function(e) {
+   e.preventDefault();
+   var slideno = $(this).data('slide');
+   console.log(slideno);
+   $('.slider-nav').slick('slickGoTo', slideno - 1);
+ });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fancy Box</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+<style type="text/css">
+a[data-fancybox] img {
+  cursor: zoom-in;
+}
+
+.fancybox__container {
+  --carousel-button-bg: rgb(0 0 0 / 44%);
+
+  --carousel-button-svg-width: 24px;
+  --carousel-button-svg-height: 24px;
+
+  --carousel-button-svg-stroke-width: 2.5;
+  --carousel-button-svg-filter: none;
+}
+
+.fancybox__nav {
+  --carousel-button-svg-width: 22px;
+  --carousel-button-svg-height: 22px;
+
+  --carousel-button-svg-stroke-width: 3;
+}
+
+.fancybox__nav .carousel__button.is-prev {
+  left: 30px;
+}
+
+.fancybox__nav .carousel__button.is-next {
+  right: 30px;
+}
+
+.carousel__button.is-close {
+  top: 30px;
+  right: 30px;
+}
+
+.fancybox__slide {
+  padding: 0;
+}
+
+.fancybox__thumbs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.fancybox__thumbs .carousel__slide {
+  padding: 20px 10px;
+  overflow: visible;
+}
+
+.fancybox__thumb {
+  border-radius: 6px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.26);
+}
+
+.is-nav-selected::after {
+  display: none;
+}
+
+.is-nav-selected .fancybox__thumb {
+  transform: scale(1.25);
+}
+
+a[data-fancybox]{
+  text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+<h1 class="mt-12 mb-8 px-6 text-center text-lg md:text-2xl font-semibold">
+  Full screen images
+</h1>
+
+<div class="flex flex-wrap gap-5 justify-center max-w-5xl mx-auto px-6">
+  <a data-fancybox="gallery" href="images/1050-500x500.jpg">
+    <img class="rounded" src="images/1050-150x150.jpg" />
+  </a>
+  <a data-fancybox="gallery" href="images/1051-500x500.jpg">
+    <img class="rounded" src="images/1051-150x150.jpg" />
+  </a>
+  <a data-fancybox="gallery" href="images/1053-500x500.jpg">
+    <img class="rounded" src="images/1053-150x150.jpg" />
+  </a>  
+  <a data-fancybox="gallery" href="images/1057-500x500.jpg">
+    <img class="rounded" src="images/1057-150x150.jpg" />
+  </a>
+</div>
+<!-- look ma, no jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script type="text/javascript">
+  Fancybox.bind();
+
+//   Fancybox.bind('[data-fancybox="gallery"]', {
+//   //dragToClose: false,
+//   Thumbs: false,
+
+//   Image: {
+//     zoom: false,
+//     click: false,
+//     wheel: "slide",
+//   },
+
+//   on: {
+//     // Move caption inside the slide
+//     reveal: (f, slide) => {
+//       slide.$caption && slide.$content.appendChild(slide.$caption);
+//     },
+//   },
+// })
+</script>
+</body>
+</html>
