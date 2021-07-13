@@ -189,7 +189,7 @@ if(strlen($message) < 8){
 </section>
 <section>
 	<small>&copy;2014 Santee Food Bank - All Rights Reserved<br>
-10925 Hartley Road, Suite J. Santee, CA 92071 </small><br>
+		   10925 Hartley Road, Suite J. Santee, CA 92071 </small><br>
 	<small>Web Design by: <a href="http://trishladd.com" target="_blank">TrishLadd.com</a></small>
 </section>
 </footer>

@@ -55,42 +55,41 @@
 
       <!-- everything after this point will be a lazy load -->
      
-      <!-- fallback if js is not available -->
+      <!-- this is a fallback if js is not available, goes to different page -->
       <noscript id="viewMore">
         <div>
           <a href="gallery.html">view more images</a>
         </div>
-          </noscript>
+      </noscript>
        <!--  -->
 
        <div id="nextPage" class="hidden">
-
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 5" data-src="images/image5.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 5" data-src="images/image5.jpg">
           <small>caption 5</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 6" data-src="images/image6.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 6" data-src="images/image6.jpg">
           <small>caption 6</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 7" data-src="images/image7.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 7" data-src="images/image7.jpg">
           <small>caption 7</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 8" data-src="images/image8.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 8" data-src="images/image8.jpg">
           <small>caption 8</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 9" data-src="images/image9.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 9" data-src="images/image9.jpg">
           <small>caption 9</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 10" data-src="images/image10.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 10" data-src="images/image10.jpg">
           <small>caption 10</small>
         </div>
         <div class="mypic">
-          <img class="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 11" data-src="images/image11.jpg">
+          <img class="lazy" loading="lazy" src="http://spacergif.org/spacer.gif" alt="lazy image 11" data-src="images/image11.jpg">
           <small>caption 11</small>
         </div>
          
@@ -131,8 +130,10 @@ function lazyLoad(){
 }//closes lazyload
 
 function cleanLazy(){
-  lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+  lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');}); 
+  console.log(lazy) 
 }
+
 cleanLazy();
 
 function isInViewport(el){
