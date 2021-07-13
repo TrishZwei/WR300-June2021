@@ -1,0 +1,858 @@
+/*CSS Foundation by Jayden Seric
+http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
+*/
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    margin: 0;
+    font-size: 18px; 
+/*this means utilizing pixel based media queries since the font px have been set*/
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-size: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;/*
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;*/
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/*end css foundation*/
+
+
+/*fontello styles*/
+@font-face {
+  font-family: 'santeefoodbank';
+  src: url('../fonts/santeefoodbank.eot?14495335');
+  src: url('../fonts/santeefoodbank.eot?14495335#iefix') format('embedded-opentype'),
+       url('../fonts/santeefoodbank.woff?14495335') format('woff'),
+       url('../fonts/santeefoodbank.ttf?14495335') format('truetype'),
+       url('../fonts/santeefoodbank.svg?14495335#santeefoodbank') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "santeefoodbank";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+}
+ 
+.icon-food:before { content: '\e800'; } 
+.icon-clock:before { content: '\e801'; }
+.icon-dollar:before { content: '\e802'; } 
+.icon-menu:before { content: '\e803'; } 
+/* end fontello*/
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**
+ * For modern browsers
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/** 
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+@font-face {
+    font-family: 'procionoregular';
+    src: url('../fonts/Prociono-Regular-webfont.eot');
+    src: url('../fonts/Prociono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Prociono-Regular-webfont.woff') format('woff'),
+         url('../fonts/Prociono-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Prociono-Regular-webfont.svg#procionoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+  background-color: #fcdf76;
+}
+
+
+body{
+    font-family: Georgia, serif;
+/*    max-width: 480px;*/
+    min-width: 320px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    letter-spacing: .05em;
+}
+/*body.location{
+  position: relative;
+}*/
+
+header{
+  background-color: #305A04;
+}
+
+h1{
+    font-family: 'procionoregular', Georgia, serif;
+    font-size: 2em;
+    color: #EC8214;
+    text-align: center;
+}
+
+#logo{
+    width: 100%;
+    background-color: #305A04;
+    background-image: url('../images/SanteeFBLogoSmall.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 105px;
+    text-align: center;
+    display: block;
+}
+
+#logo h1{
+    font-size: 1.5em;
+    padding-top: 70px;
+    color:#ECB213;
+}
+
+
+/*navigation styling*/
+
+.no-js a.menu-link{
+    display: none;
+}
+
+.js a.menu-link {
+     float: left;
+     display: block;
+     padding: 1em;
+     background-color:#B1824C;
+     color:white;
+     width:100%;
+     border-top:#B1824C 1px solid;
+     text-decoration:none;
+}
+
+nav[role="navigation"]{
+    clear: both;
+    -moz-transition:all 0.5s ease-out;
+    -webkit-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+}
+
+/* basic nav Styles*/
+nav ul {
+  list-style: none;
+  padding-left:0;
+}
+
+#menu a {
+  text-transform: uppercase;
+  text-decoration:none;
+  display: block;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  text-align: left;
+  color: white; 
+  display: block;
+  margin-bottom: 1px;
+  padding-left: 1em;
+  line-height: 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color:#7E5D39;
+  padding-bottom:0.02em;  
+}
+
+#menu a:hover{
+    background-color:#4E2D26;
+}
+
+/* .js class added dynamically by JS. 
+.active class is toggled by JS  */
+
+.js nav[role="navigation"]{
+    overflow: hidden;
+    max-height: 0;
+    background-color: #4E2D26;
+    }
+
+nav[role="navigation"].active{
+    max-height: 30em;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #4E2D26;
+    background-color: #4E2D26;
+}
+
+main p, .contact main>div{
+    padding: .5em;
+}
+.location main{
+  text-align: center;
+}
+
+aside #gmap{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#gmap iframe{
+  width: 100%;
+}
+
+
+main h3{
+  color: #305a04;
+  text-align: center;
+  width: 100%;
+}
+
+main section{
+    margin:0; 
+    font-size: 1.3em;
+    padding: .4em;
+}
+
+/*.home main section:hover,*/ 
+.home main section:focus{
+    background-color: #ECB213;
+
+}
+
+main section a{
+    min-height: 45px;
+}
+
+main a{
+    color: firebrick;
+    font-weight: bold;
+}
+
+main [title*="donate"]{
+      display: inline-block;
+      min-height: 55px;
+      min-width: 80px;
+      border-radius: 10px;
+      background-color: #9EC80E;
+      line-height: 2.2em;
+      color: #305A04;
+      text-align: center;
+      margin:.25em;
+}
+
+main section [class^="icon-"]{
+    font-size: 4em;
+    color: #305A04;  
+    font-weight: normal;
+    margin: .2em .05em; 
+}
+
+main section>div{
+text-align: center;
+}
+
+div.quick-amounts{
+    text-align: center;
+    width: 100%;
+    margin: .75em auto;
+}
+
+span.name{
+  display: block;
+  text-align: center;
+  border-top: 1px solid #305A04;
+  padding-top: .5em;
+}
+
+span.days{
+  display: block;
+  text-align: center;
+  padding-top: .5em;
+}
+
+span.organization, span.hours{
+  display: block;
+  text-align: center;
+  font-size: .8em;
+  padding-bottom: .5em;
+  color: #777;
+}
+
+form fieldset{
+  border: none;
+}
+
+form fieldset label, 
+form fieldset input, 
+form fieldset textarea, 
+form fieldset select{
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+form fieldset label, legend{
+margin: .5em auto;
+color: #305A04;
+font-weight: bold;
+}
+
+form fieldset{
+  border-top: 1px solid #999;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+color: #888;
+font-family: verdana;
+font-style: italic;
+font-size: .8em;
+border: 2px solid #9EC80E;
+background: #FBFBFB;
+padding-left: 2px;
+padding-top: 10px;
+}
+
+textarea, select{
+  padding-top: 2px;
+}
+
+form{
+  text-align: center;
+}
+
+form button{
+background-color: #EC8214;
+color: #b61d1a;
+font-weight: bold;
+border-top: solid 2px #F2B87C; 
+border-left: solid 2px #F2B87C; 
+border-bottom: solid 2px #CE7213;
+border-right: solid 2px #CE7213;
+margin: 1em auto;
+border-radius: 10px;
+line-height: 3em;
+display: block;
+width: 80%;
+font-family: 'procionoregular', Georgia, serif;
+font-size: 1em;
+}
+
+section.images{
+  text-align: center;
+}
+.images figure{
+  width: 80%;
+  margin: 1em auto;
+  padding: 1em;
+  background-color: #fff;
+  border: solid 1px maroon;
+}
+
+figcaption a{
+  font-size: .75em;
+  border-bottom: dotted 1px maroon;
+}
+
+
+.video-container{
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px
+}
+
+    .video{
+    position: relative;
+    padding-bottom:56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1em;
+    width: 100%;
+
+    }
+/*the absolute positioning is relative to the video container*/ 
+  .video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+[data-twttr-rendered="true"] aside{
+  background-color: #ecb213;
+  border-top: 3px solid #ec8214;
+  border-bottom: 3px solid #ecb213;
+
+}
+
+
+[data-twttr-rendered="false"] aside, .no-js aside{
+  display: none;
+}
+
+aside h3{
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #ec8214;
+  color: lightyellow;
+  padding: .3em;
+}
+
+/*twitter feed styling*/
+
+#twitter-feed{
+    width: 80%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+/*.location aside{
+  position: absolute;
+  top: 163px;
+  width: 100%;
+}
+*/
+
+/*.location main{
+position: relative;
+  top:200px;
+}*/
+
+footer{
+  background-color: lightyellow;
+}
+
+/*.location footer{
+   position: relative;
+  top: 200px;
+}
+*/
+
+footer section{
+  text-align: center;
+  padding: 0; 
+}
+
+footer section h4{
+  padding: .5em;
+  background-color: #9ec80e;
+  font-weight: bolder;
+  color: #305a04
+}
+
+footer section .phone, footer section .location{
+  background-color: #ecb213;
+  color:firebrick;
+  font-weight: bold;
+  border-bottom: solid 2px #ec8214;
+  margin: 1em 0;
+  border-radius: 10px;
+  line-height: 3em;
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+}
+
+footer section .location{
+  line-height: 1.5em;
+}
+
+footer section:last-child{
+  width: 100%;
+  background-color: #b1824c;
+  color: white;
+  text-align: center;
+  border-bottom: none;
+  padding: 1em;
+}
+
+
+footer section p{
+  padding: .5em;
+  /*background-color: lightyellow;*/
+  line-height: 1.3em;
+}
+
+label.error{
+  color: #b61d1a;
+  font-size: .7em;
+  font-style: italic;
+}
+
+.success{
+  background-color: #dceda1;
+  width: 90%;
+  margin: 0 auto 1em;
+}
+.success h1{
+  color: #305A04;
+  width: 100%;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+section.error{
+  background-color: #eda1a1;
+  width: 90%;
+  margin: 0 auto 1em;
+}
+section.error h1{
+  color: #b22222;
+  width: 100%;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+footer section div#open-close{
+  font-size:  .8em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+footer section div.closed{
+  color: #888;
+  font-style: italic;
+}
+
+footer section div.fbopen{
+  color: #EC8214;
+  font-weight: bold;
+}
+
+footer section div.comopen{
+  color: #ecb213;
+  font-weight: bold;
+}
+
+@media only screen and (min-width:575px){
+  #logo{
+    background-position: top left;
+    height: 5em;
+  }
+  #logo h1{
+    text-align: left;
+    padding-top:10px;
+    font-size: 2.5em;
+    margin-left: 2.5em;
+  }
+
+  h1{
+  text-align: left;
+  } 
+  main section:first-of-type img{
+  float: right;
+  width: 40%;
+  max-width: 600px;
+  }
+  /*nav styles*/
+  .js a.menu-link{
+  display:none;
+  }
+
+  .js nav[role=navigation] {
+     overflow:auto;
+     max-height: 5em;
+  }
+  
+  nav#menu {
+  width:100%;
+  background-color:#B1824C;
+  overflow: hidden;
+  border-top: none;
+  }
+
+  nav#menu li {
+  float: left;
+  }
+
+  nav#menu a {
+  display:inline;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    padding:.5em 1em;   
+    background-color:#B1824C;
+    color:white;  
+    min-height: 55px;
+  }
+
+  #menu a:hover{
+    background-color:rgba(255, 255, 255, .3);
+  }
+/*content styles*/
+  main section [class^="icon-"]{
+  float: left;
+  font-size: 5em;
+  }
+
+  .home main section div:nth-of-type(2){
+  text-align: left;
+  }
+
+  .location main, .contact main, span.days, span.hours{
+  padding-left:1em; 
+  text-align: left;
+  padding-top:0;
+  }
+
+  .images figure{
+  width: 44%;
+  margin: 1em .5em;
+  padding: .8em;
+  background-color: #fff;
+  border: solid 1px maroon;
+  display: inline-block;
+  }
+
+  fieldset textarea{
+  min-height: 200px;
+  }
+
+  footer section .phone{
+  background-color: transparent;
+  color: initial;
+  border-radius:0;
+  border: none;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin:0;
+  cursor: default;
+  }
+
+  footer section{
+  width: 33.3333%;
+  float: left;
+  border: solid 1px lightyellow;
+  }
+
+  footer section:first-of-type{
+  width: 100%;
+  }
+
+  section.success, section.error{
+  width: 70%;
+}
+
+
+}
+
+@media only screen and (min-width: 670px){
+
+
+}
+
+
+/*end tablet size*/
+
+/*basic desktop size*/
+@media only screen and (min-width: 725px){
+.home main section{
+  width: 33.3333%;
+  float: left;
+  }
+
+.home main section:first-of-type{
+  width: 100%;
+  }
+
+main section [class^="icon-"]{
+  clear:both;
+  width: 100%;
+}
+
+fieldset{
+  display: inline-block;
+  width: 49%;
+  margin: 0;
+  vertical-align: top;
+}
+
+
+footer.cf section{
+  width: 25%;
+}
+
+footer.cf section:last-of-type{
+  width: 100%;
+}
+
+footer section .location{
+  background-color: transparent;
+  color: initial;
+  border-radius:0;
+  border: none;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin:0 auto;
+  cursor: default;
+  }
+  footer section h4{
+    min-height: 60px;
+  }
+
+}
+
+@media only screen and (min-width: 794px){
+    .location main{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  .location aside{
+    display: inline-block;
+    width: 45%;
+  }
+
+
+
+  footer section h4{
+    min-height: initial;
+  }
+
+
+}
+
+@media only screen and (min-width: 865px){
+.about main ul.boxes{
+  width: 97%;
+  margin: 0 auto;
+}
+
+.about main .boxes li{
+  border-top: 1px solid #305A04;
+}
+
+.about main .boxes span{
+  display: inline-block;
+  margin-right:.5em;
+  border-top: none;
+}
+
+
+}
+
+
+
+@media only screen and (min-width:886px){
+.gallery .images figure{
+  width: 30%;
+}
+
+}
+
+@media only screen and (min-width: 1000px){
+main{
+  display: table-cell;
+}
+aside{
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+.home  main{
+    width: 70%;
+  }
+
+.home aside{
+    width: 30%;
+  }
+
+  .location main{
+    width: 46%
+  }
+
+  .location aside{
+    width: 53%;
+  }
+
+  .location aside #gmap{
+    width: 95%;
+  }
+
+  .location aside #gmap iframe{
+    height: 300px;
+  }
+
+}
+
+
+
+
+
