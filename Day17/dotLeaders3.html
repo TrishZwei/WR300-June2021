@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dot Leaders: not working... yet</title>
+	<style type="text/css">
+	body{
+		font-family: verdana;
+		background-color: black;
+		color: white;
+	}
+
+	ul.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+	}
+	ul.leaders li{
+	display: flex;
+	}
+
+	ul.leaders span.dots::before {
+    width: 0;
+    white-space: nowrap;
+    content:
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+}
+
+table{
+	width:90%;
+	margin: 0 auto;
+}
+
+table .dots{
+	background-color: cadetblue;
+}
+
+table td:first-child{
+	background-color: lightblue;
+	width: 28%;
+}
+
+table td:last-child{
+	background-color: green;
+	width: 15%;
+	text-align: right;
+}
+
+
+
+	</style>
+</head>
+<body>
+<ul class=leaders>
+	<li>
+		<span>Salmon Ravioli</span>
+		<span class="dots">.</span>
+	 	<span>7.95</span>
+	</li>
+	<li>
+		<span>Fried Calamari</span>
+		<span class="dots">&nbsp;</span>
+	 	<span>8.95</span>
+	</li>
+	<li>
+		<span>Almond Prawn Cocktail</span>
+		<span class="dots">&nbsp;</span>
+	 	<span>7.95</span>
+	</li>
+	<li>
+		<span>Bruschetta</span>
+		<span class="dots">&nbsp;</span>
+	 	<span>5.25</span>
+	</li>
+	<li>
+		<span>Margherita Pizza</span>
+		<span class="dots">&nbsp;</span>
+	 	<span>10.95</span>
+	</li>
+</ul>
+<table>
+	<tr>
+		<td>Salmon Ravioli</td>
+		<td class="dots">.</td>
+	 	<td>7.95</td>
+	</tr>
+	<tr>
+		<td>Fried Calamari</td>
+		<td class="dots">&nbsp; ..........</td>
+	 	<td>8.95</td>
+	</tr>
+	<tr>
+		<td>Almond Prawn Cocktail</td>
+		<td class="dots">&nbsp;</td>
+	 	<td>7.95</td>
+	</tr>
+	<tr>
+		<td>Bruschetta</td>
+		<td class="dots">&nbsp;</td>
+	 	<td>5.25</td>
+	</tr>
+	<tr>
+		<td>Margherita Pizza</td>
+		<td class="dots">&nbsp;</td>
+	 	<td>10.95</td>
+	</tr>
+
+
+
+</table>
+
+
+</body>
+</html>
