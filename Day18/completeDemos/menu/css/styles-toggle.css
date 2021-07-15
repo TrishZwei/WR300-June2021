@@ -1,0 +1,172 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*clear fix*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+html{
+	background-color: #141412;
+}
+
+body{
+	font-size: 18px;
+	background-color: #F7F5E7;
+	width: 98%;
+	min-width: 320px;
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: Verdana
+}
+
+h1, h2, h3, h4, h5, h6{
+color: #441D0D;
+margin: .5em 0;
+font-size: 1.4em;
+}
+
+h1{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 1.8em;
+}
+
+h3{
+	font-size: 1.5em;
+}
+
+.hide{
+	display: none;
+}
+
+a{
+	text-decoration: none;
+	color: #BE815A;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #121212;
+}
+
+#main-nav ul{
+	margin: 0;
+	padding: 0; 
+}
+
+#main-nav ul li a{
+	background-color: #FEAD78;
+	color: white;
+	display: block;
+	margin: .5em .25em;
+	padding: 1.25em;
+	text-align: center;
+}
+
+#main-nav ul li a:hover{
+	background-color: #FEC39C;
+	text-decoration: none; 
+}
+
+/*toggle styles*/
+
+.no-js button.hamburger{
+	display: none;
+}
+
+.js #menu{
+	margin-bottom: 0;
+}
+
+.js #main-head #menu a{
+	width: 100%;
+	text-align: center;
+	color: white;
+	display: block;
+	padding: .5em;
+}
+
+.js nav[role=navigation]{
+	overflow: hidden;
+	max-height: 0;
+	transition: all 1s ease-in-out ;
+	/*added transition*/
+}
+
+/*changed from class active to is-active*/
+.js nav[role=navigation].is-active{
+	max-height: 30em;
+}
+
+aside{
+	padding: 1em .5em;
+}
+
+
+
+footer{
+	background-color: #A45018;
+	color: white;
+	padding: 1.5em .5em;
+	text-align: right;
+}
+
+@media only screen and (min-width: 580px){
+
+/*toggle styles*/
+button.hamburger{
+	display: none;
+}
+
+#main-nav{
+	max-height: 30em;
+}
+
+#main-nav ul{
+	width: 100%;
+	text-align: center;
+	background-color: #A45018;
+}
+
+#main-nav ul li{
+	display: inline-block;
+}
+
+#main-nav ul li a{
+ border-radius: 5px;
+}
+
+
+}/*end media query*/
+
+@media only screen and (min-width: 850px){
+	main{
+		float: left;
+		width: 60%;
+	}
+
+	aside{
+		float: left;
+		width: 40%;
+	}
+
+footer{
+		clear:both;
+	}
+
+}
