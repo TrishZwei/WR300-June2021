@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fancy Box</title>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+<style type="text/css">
+/*fancybox styles*/
+
+a[data-fancybox] img {
+  cursor: zoom-in;
+}
+
+.fancybox__container {
+  --fancybox-bg: rgba(17, 6, 25, 0.85);
+}
+
+.fancybox__container .fancybox__content {
+  padding: 1rem;
+  border-radius: 6px;
+  color: #374151;
+  background: #fff;
+  box-shadow: 0 8px 23px rgb(0 0 0 / 50%);
+}
+
+.fancybox__content > .carousel__button.is-close {
+  top: 0;
+  right: -38px;
+}
+
+.fancybox__caption {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  /* Prevent opacity change when dragging up/down */
+  --fancybox-opacity: 1;
+}
+
+</style>
+</head>
+<body>
+	<h1>
+		Fancybox Default
+	</h1>
+<main>	
+<div class="flex flex-wrap gap-5 justify-center max-w-5xl mx-auto px-6">
+  <a
+    data-caption="Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. "
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/1/800x450"
+  >
+    <img class="rounded" src="https://lipsum.app/id/1/200x150" />
+  </a>
+  <a
+    data-caption="Short caption"
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/2/800x450"
+  >
+    <img class="rounded" src="https://lipsum.app/id/2/200x150" />
+  </a>
+  <a
+    data-caption=""
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/3/800x450"
+  >
+    <img class="rounded" src="https://lipsum.app/id/3/200x150" />
+  </a>
+  <a
+    data-caption=""
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/4/800x450"
+  >
+    <img src="https://lipsum.app/id/4/200x150" />
+  </a>
+  <a
+    data-caption=""
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/5/800x450"
+  >
+    <img class="rounded" src="https://lipsum.app/id/5/200x150" />
+  </a>
+  <a
+    data-caption=""
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/6/800x450"
+  >
+    <img class="rounded" src="https://lipsum.app/id/6/200x150" />
+  </a>
+  <a
+    data-caption=""
+    data-fancybox="gallery"
+    href="https://lipsum.app/id/7/800x450"
+  >
+    <img class="rounded" src="https://lipsum.app/id/7/200x150" />
+  </a>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</body>
+</html>
