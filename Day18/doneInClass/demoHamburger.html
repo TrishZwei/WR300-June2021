@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
 	<meta charset="utf-8">
-	<title>Hamburger Button Demo</title>
-	<!-- <link href="css/hamburgers.css" rel="stylesheet"> -->
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+	<title>Hamburger Button Demo 2</title>
+	<link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styles-toggle.css" rel="stylesheet">
 	<style type="text/css">
 	body{
 		font-family: Verdana;
@@ -104,14 +106,18 @@ hamburger, hamburger--3dx js-hamburger is-active
   		</span>
   		Menu
 	</button>
+  <!-- nav structure from day 9 -->
 	<nav id="main-nav" role="navigation">
-		<a href="#">one</a>
-		<a href="#">two</a>
-		<a href="#">three</a>
-		<a href="#">four</a>
+    <h2 class="hide">
+      Site Navigation
+    </h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Deals</a></li>
+    </ul>
 	</nav>
-
-	
 </header>
 <main>
 	main stuff
@@ -126,8 +132,10 @@ hamburger, hamburger--3dx js-hamburger is-active
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script type="text/javascript">
+  $('html').attr('class', 'js');
+  
 $('button.hamburger').click( function(){
-	$(this).toggleClass('is-active');
+	$('button.hamburger, #main-nav').toggleClass('is-active');
 
 })	
 
