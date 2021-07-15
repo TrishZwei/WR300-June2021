@@ -1,0 +1,3 @@
+#tested this at: http://activityjournal.trishladd.com/
+ErrorDocument 404 /bad-url.html
+#https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
