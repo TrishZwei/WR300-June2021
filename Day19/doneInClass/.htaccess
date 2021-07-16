@@ -1,0 +1,8 @@
+#this is htaccess, an Apache server file.
+
+#in the root folder it could be written like this:
+#ErrorDocument 404 /not-found.html
+
+#subfolders need complete path:
+ErrorDocument 404 http://localhost/TLadd/WR300-June2021/Day19/doneInClass/not-found.html
+
