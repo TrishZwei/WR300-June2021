@@ -4,9 +4,7 @@
 	<title>SVG Test</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="scripts/modernizr.custom.js"></script>
+
 	<style type="text/css">
 	* {
   box-sizing: border-box;
@@ -21,6 +19,22 @@ img.star-child {
     height: auto;
     shape-outside: polygon(0% 0%, -0.79% 100.14%, 98.83% 100.29%, 104.11% 37.24%, 72.30% -0.14%);
     float: left;
+    opacity: 1;
+}
+
+/*background image attempt*/
+.hero_parent{
+	width: 100%;
+	height: auto;
+}
+
+
+.hero .wrap {
+    background-image: url(about_page_hero_crop.jpg);
+    width: 50%;
+    height: 529px;
+    shape-outside: polygon(0% 0%, 100% 0%, 100% 100%, 5.85% 99.62%);
+    float: right;
     opacity: 1;
 }
 	</style>
@@ -40,9 +54,9 @@ img.star-child {
 		<div class="hero_parent">
 		  <section class="hero">
 		    <div class="wrap"></div>
-		    <h1>About <br>Van Gogh</h1>
+		    <h1>About Van Gogh</h1>
 		    <p>Vincent van Gogh, one of the most well-known post-impressionist artists, for whom color was the chief symbol of expression, was born in Groot-Zundert, Holland on March 30, 1853.</p>
-		    <p>In a decade, Vincent Willem van Gogh created about 2,100 artworks, including around 860 oil paintings, most of which date from the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic,impulsive and expressive brushwork that contributed to the foundations of modern art. He was not commercially successful, and his suicide at thirty-seven came after years of depression and poverty.</p>
+		    <p>In a decade, Vincent Willem van Gogh created about 2,100 artworks, including around 860 oil paintings, most of which date from the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. He was not commercially successful, and his suicide at thirty-seven came after years of depression and poverty.</p>
 		  </section>
 		</div>
 	</main>
