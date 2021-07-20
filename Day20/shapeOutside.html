@@ -17,7 +17,7 @@ body {
 img.star-child {
     width: 20%;
     height: auto;
-    shape-outside: polygon(0% 0%, -0.79% 100.14%, 98.83% 100.29%, 104.11% 37.24%, 72.30% -0.14%);
+    shape-outside: polygon(0% 0%, 0% 100%, 100% 100%, 100% 33%, 67% 33%, 55% 0% );
     float: left;
     opacity: 1;
 }
@@ -30,12 +30,24 @@ img.star-child {
 
 
 .hero .wrap {
+	/*
+	notes: 
+	730x612 
+	1.19 (can round up to 1.20 for ease) 
+	because the width is only 50% of the parent container, 
+	in order to maintian the aspect ratio: 100/2 = 50, 120/2 = 60
+	the padding bottom is 60%
+	*/
     background-image: url(about_page_hero_crop.jpg);
     width: 50%;
-    height: 529px;
-    shape-outside: polygon(0% 0%, 100% 0%, 100% 100%, 5.85% 99.62%);
+    height: 0;
+    padding-bottom: 60%;
+    shape-outside:polygon(0% 7%, 13% 0%, 100% 0%, 99% 70%, 26% 70%, 0% 44%);
     float: right;
     opacity: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
 }
 	</style>
 </head>
