@@ -99,7 +99,7 @@ if($valid ){
 
 	//uncomment this in for live server: 
 	$mail = mail($to, $subject, $body, $headers); 
-	echo $mail;
+	//echo $mail;
 
 // comment this on live server
 	// echo $to;

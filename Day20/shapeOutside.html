@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+.cf:before,
+.cf:after {
+content: " ";
+display: table;
+}
+
+.cf:after {
+clear: both;
+}
+
 body {
   font-family: verdana;
 }
@@ -23,7 +33,7 @@ img.star-child {
 }
 
 /*background image attempt*/
-.hero_parent{
+.hero_parent, .hero_parent2{
 	width: 100%;
 	height: auto;
 }
@@ -49,6 +59,22 @@ img.star-child {
     background-size: contain;
     background-position: top right;
 }
+
+.hero2 .wrap2 {
+    background-image: url(about_page_hero_crop.jpg);
+    width: 50%;
+    height: 0;
+    padding-bottom: 60%;
+    shape-outside: polygon(3.47% -0.38%, 90.09% 0%, 100.95% 13.16%, 99.64% 63.95%, 63.28% 75.53%, 4.1% 64.27%);
+    float: left;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+}
+
+
+
 	</style>
 </head>
 <body>
@@ -71,6 +97,14 @@ img.star-child {
 		    <p>In a decade, Vincent Willem van Gogh created about 2,100 artworks, including around 860 oil paintings, most of which date from the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. He was not commercially successful, and his suicide at thirty-seven came after years of depression and poverty.</p>
 		  </section>
 		</div>
+		<div class="hero_parent2">
+		  <section class="hero2">
+		    <div class="wrap2"></div>
+		    <h1>About Van Gogh</h1>
+		    <p>Vincent van Gogh, one of the most well-known post-impressionist artists, for whom color was the chief symbol of expression, was born in Groot-Zundert, Holland on March 30, 1853.</p>
+		    <p>In a decade, Vincent Willem van Gogh created about 2,100 artworks, including around 860 oil paintings, most of which date from the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. He was not commercially successful, and his suicide at thirty-seven came after years of depression and poverty.</p>
+		  </section>
+		</div>		
 	</main>
 
 </body>
