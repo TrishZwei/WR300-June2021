@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Random Student Order</title>
+  <style type="text/css">
+  body{
+    font-family: verdana;
+    font-size: 200%;
+    }
+  </style>
+</head>
+<body>
+<h1>Order of Presentations</h1>
+<p>Determined by a randomly shuffled array:</p>
+<div id="message"></div>
+
+<!-- used -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<!-- any jQuery dependent files and scripts go below jQ -->
+
+<script>
+//my custom JS code	
+var students = ['Chloe', 'Joe', 'Miguel'];
+
+function shuffle(array) {
+len = array.length; 
+//gets the initial length of the array passed to the function, tells us how many times we need to go to the array to get a new value.
+var tempArray = []; 
+//allows us to store a set of values gotten from the initial array
+
+for(i = 0; i<len; i++){
+ item = array.splice(getRandNum(0, array.length-1), 1);
+ tempArray.push(item[0]); //if you don't do this the item will be a one item array. This way it gets the value of the individual item that was taken out.
+ //console.log(tempArray);
+}
+
+return tempArray;
+
+}
+
+students = shuffle(students);
+students = students.join('<br>');
+$('#message').html(students);
+
+function getRandNum(min, max){
+  return Math.round(Math.random()*(max-min))+min;
+}
+</script>
+
+</body>
+</html>
